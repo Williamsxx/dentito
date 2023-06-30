@@ -52,6 +52,11 @@
                                 <li class="nav-item">
                                     <a class="nav-link" >Contacto</a>
                                 </li>
+                                <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;">
+                                <li class="nav-item">
+                                    <a class="nav-link" >Registrate</a>
+                                </li>
+                            </router-link>
                             </ul>
                         </div>
                         <a class="btn_2 d-none d-lg-block" href="#">Contactenos: 999999999</a>
@@ -70,12 +75,11 @@
                     <div class="banner_text">
                         <div class="banner_text_iner">
                             <h5>Estamos Aquí Para Su Cuidado</h5>
-                            <h1>Best Care &
-                                Better Doctor</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                                elit sed do eiusmod tempor incididunt ut labore et dolore
-                                magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus cmodo viverra </p>
+                            <h1>Mejor Atención y Mejores Médicos</h1>
+                            <p>"En nuestra clínica odontológica, nos enorgullece ofrecer servicios de alta calidad y atención personalizada para el cuidado de tu salud bucal. Nuestro equipo de profesionales altamente capacitados está comprometido en brindarte los mejores tratamientos dentales para que puedas lucir y sentir una sonrisa radiante."</p>
+                            <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;">
                             <a href="#" class="btn_2">Reservar Cita</a>
+                            </router-link>
 
                         </div>
                     </div>
