@@ -1,20 +1,26 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Logeo from '../views/logeo.vue'
-import Main from '../views/Main.vue'
+import Perfil from '../views/perfil.vue'
 import Cita from '../views/cita.vue'
+import Main from '../views/main.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'main',
+    component: Main
+  },
+  {
+    path: '/login',
     name: 'loginn',
     component: Logeo
   },
   {
     path: '/perfil',
-    name: 'main',
-    component: Main
+    name: 'perfil',
+    component: Perfil
   },
   {
     path: '/cita',

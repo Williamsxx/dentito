@@ -1,192 +1,590 @@
-<template >
+<template>
+    <div>
+ <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <!-- <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a> -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
+                        <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item active">
+                                    <a class="nav-link" >Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" >Especialidades</a>
+                                </li>
 
-<div class="container-xl px-4 mt-4">
-  <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button style="color: black;" class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Perfil</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button style="color: black;"  class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Mensajes</button>
-  </li>
-  <!-- <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-  </li> -->
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <hr class="mt-0 mb-4">
-    <div class="row">
-        <div class="col-xl-4">
-            <!-- Profile picture card-->
-            <div class="card mb-4 mb-xl-0">
-                <div class="card-header">Imagen</div>
-                <div class="card-body text-center">
-                    <!-- Profile picture image-->
-                    <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-                    <!-- Profile picture help block-->
-                    <div class="small font-italic text-muted mb-4"></div>
-                    <!-- Profile picture upload button-->
-                    <router-link :to="{ name: 'reservarCita' }">
-                    <button class="btn btn-primary" type="button">Reservar Cita</button>
-                    </router-link>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" >Doctores</a>
+                                    <!-- <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Pages
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="services.html">services</a>
+                                        <a class="dropdown-item" href="dep.html">depertments</a>
+                                        <a class="dropdown-item" href="elements.html">Elements</a>
+                                    </div> -->
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" >Blog</a>
+                                    <!-- <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        blog
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
+                                        <a class="dropdown-item" href="blog.html">blog</a>
+                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
+                                    </div> -->
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" >Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <a class="btn_2 d-none d-lg-block" href="#">Contactenos: 999999999</a>
+                    </nav>
                 </div>
             </div>
         </div>
-        <div class="col-xl-8">
-            <!-- Account details card-->
-            <div class="card mb-4">
-                <div class="card-header">Datos Personales</div>
-                <div id="datos" class="col-md-7 ps-md-4">
-                <div style="margin: 0;" class="row">
-                    <div class="col-12 bg-white px-3 mb-3 pb-3">
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <p class="py-2">Nombres</p>
-                            <p class="py-2 text-muted">Juan Pablo</p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <p class="py-2">Apellidos</p>
-                            <p class="py-2 text-muted">Quispe Mamani</p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <p class="py-2">Celular</p>
-                            <p class="py-2 text-muted">999999999</p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between border-bottom">
-                            <p class="py-2">Direccion</p>
-                            <p class="py-2 text-muted">Av Peru</p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between">
-                            <p class="py-2">DNI</p>
-                            <p class="py-2 text-muted"> 12345678</p>
+    </header>
+    <!-- Header part end-->
+
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-xl-5">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h5>Estamos Aquí Para Su Cuidado</h5>
+                            <h1>Best Care &
+                                Better Doctor</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit sed do eiusmod tempor incididunt ut labore et dolore
+                                magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus cmodo viverra </p>
+                            <a href="#" class="btn_2">Reservar Cita</a>
+
                         </div>
                     </div>
-              
+                </div>
+                <div class="col-lg-7">
+                    <div class="banner_img">
+                        <img src="img/banner_img.png" alt="">
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- banner part start-->
+
+    <!-- about us part start-->
+    <section class="about_us padding_top">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6 col-lg-6">
+                    <div class="about_us_img">
+                        <img src="img/top_service.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="about_us_text">
+                        <h2>Nosotros</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                            Quis ipsum suspendisse ultrices gravida. Risus cmodo viverra
+                            maecenas accumsan lacus vel</p>
+                        <a class="btn_2 " href="#">learn more</a>
+                        <div class="banner_item">
+                            <div class="single_item">
+                                <img src="img/icon/banner_1.svg" alt="">
+                                <h5>Emergency</h5>
+                            </div>
+                            <div class="single_item">
+                                <img src="img/icon/banner_2.svg" alt="">
+                                <h5>Appointment</h5>
+                            </div>
+                            <div class="single_item">
+                                <img src="img/icon/banner_3.svg" alt="">
+                                <h5>Qualfied</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-          <div class="card">
-          <h4 style="padding: 30px;">Hisotrial de Atenciones</h4>
-          <table class="table ">
-  <thead>
-    <tr>
-      <th scope="col">Nro</th>
-      <th scope="col">Fecha y hora</th>
-      <th scope="col">Diente picado</th>
-      <th scope="col">Luis Alberto</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>2023-04-11 07:00</td>
-      <td>Diente picado</td>
-      <td>Luis Alberto</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>2023-06-15 14:00</td>
-      <td>Diente picado</td>
-      <td>Luis Alberto</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>2023-02-11 07:00</td>
-      <td>Diente picado</td>
-      <td>Luis Alberto</td>
-    </tr>
-  </tbody>
-</table>
+    </section>
+    <!-- about us part end-->
+
+    <!-- feature_part start-->
+    <section class="feature_part">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="section_tittle text-center">
+                        <h2>Nuestros Servicios</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-3 col-sm-12">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><img src="img/icon/feature_1.svg" alt=""></span>
+                            <h4>Better Future</h4>
+                            <p>Darkness multiply rule Which from without life creature blessed
+                                give moveth moveth seas make day which divided our have.</p>
+                        </div>
+                    </div>
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
+                            <h4>Better Future</h4>
+                            <p>Darkness multiply rule Which from without life creature blessed
+                                give moveth moveth seas make day which divided our have.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                        <div class="single_feature_img">
+                            <img src="img/service.png" alt="">
+                        </div>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><img src="img/icon/feature_1.svg" alt=""></span>
+                            <h4>Better Future</h4>
+                            <p>Darkness multiply rule Which from without life creature blessed
+                                give moveth moveth seas make day which divided our have.</p>
+                        </div>
+                    </div>
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><img src="img/icon/feature_2.svg" alt=""></span>
+                            <h4>Better Future</h4>
+                            <p>Darkness multiply rule Which from without life creature blessed
+                                give moveth moveth seas make day which divided our have.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
+    <!-- feature_part start-->
+
+    <!-- our depertment part start-->
+    <section class="our_depertment section_padding">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-12">
+                    <div class="depertment_content">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-8">
+                                <h2>Our Depertment</h2>
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="single_our_depertment">
+                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
+                                                    alt=""></span>
+                                            <h4>Better Future</h4>
+                                            <p>Darkness multiply rule Which from without life creature blessed
+                                                give moveth moveth seas make day which divided our have.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="single_our_depertment">
+                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
+                                                    alt=""></span>
+                                            <h4>Better Future</h4>
+                                            <p>Darkness multiply rule Which from without life creature blessed
+                                                give moveth moveth seas make day which divided our have.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="single_our_depertment">
+                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
+                                                    alt=""></span>
+                                            <h4>Better Future</h4>
+                                            <p>Darkness multiply rule Which from without life creature blessed
+                                                give moveth moveth seas make day which divided our have.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="single_our_depertment">
+                                            <span class="our_depertment_icon"><img src="img/icon/feature_2.svg"
+                                                    alt=""></span>
+                                            <h4>Better Future</h4>
+                                            <p>Darkness multiply rule Which from without life creature blessed
+                                                give moveth moveth seas make day which divided our have.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
         </div>
-    
-       
+    </section>
+    <!-- our depertment part end-->
 
-    </div>
-  </div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    <!--::doctor_part start::-->
+    <section class="doctor_part section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="section_tittle text-center">
+                        <h2> Doctores Experimentados</h2>
+                        <!-- <p>Face replenish sea good winged bearing years air divide wasHave night male also</p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="img/doctor/doctor_1.png" alt="doctor">
+                            <div class="social_icon">
+                                <ul>
+                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single_text">
+                            <div class="single_blog_text">
+                                <h3>DR Adam Billiard</h3>
+                                <!-- <p>Heart specialist</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="img/doctor/doctor_4.png" alt="doctor">
+                            <div class="social_icon">
+                                <ul>
+                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single_text">
+                            <div class="single_blog_text">
+                                <h3>DR Adam Billiard</h3>
+                                <!-- <p>Medicine specialist</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="img/doctor/doctor_2.png" alt="doctor">
+                            <div class="social_icon">
+                                <ul>
+                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single_text">
+                            <div class="single_blog_text">
+                                <h3>DR Fred Macyard</h3>
+                                <!-- <p>CHeart specialist</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="single_blog_item">
+                        <div class="single_blog_img">
+                            <img src="img/doctor/doctor_3.png" alt="doctor">
+                            <div class="social_icon">
+                                <ul>
+                                    <li><a href="#"> <i class="ti-facebook"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-twitter-alt"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-instagram"></i> </a></li>
+                                    <li><a href="#"> <i class="ti-skype"></i> </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single_text">
+                            <div class="single_blog_text">
+                                <h3>DR Justin Stuard</h3>
+                                <!-- <p>Heart specialist</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::doctor_part end::-->
+
+    <!--::regervation_part start::-->
+    <!-- <section class="regervation_part section_padding">
+        <div class="container">
+            <div class="row align-items-center regervation_content">
+                <div class="col-lg-7">
+                    <div class="regervation_part_iner">
+                        <form>
+                            <h2>Make an Appointment</h2>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="password" class="form-control" id="inputPassword4"
+                                        placeholder="Email address">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select class="form-control" id="Select">
+                                        <option value="1" selected>Select service</option>
+                                        <option value="2">Name of service</option>
+                                        <option value="3">Name of service</option>
+                                        <option value="4">Name of service</option>
+                                        <option value="5">Name of service</option>
+                                    </select>
+                                </div>
+                                <div class="form-group time_icon col-md-6">
+                                    <select class="form-control" id="Select2">
+                                        <option value="" selected>Time</option>
+                                        <option value="1">8 AM TO 10AM</option>
+                                        <option value="1">10 AM TO 12PM</option>
+                                        <option value="1">12PM TO 2PM</option>
+                                        <option value="1">2PM TO 4PM</option>
+                                        <option value="1">4PM TO 6PM</option>
+                                        <option value="1">6PM TO 8PM</option>
+                                        <option value="1">4PM TO 10PM</option>
+                                        <option value="1">10PM TO 12PM</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <textarea class="form-control" id="Textarea" rows="4"
+                                        placeholder="Your Note "></textarea>
+                                </div>
+                            </div>
+                            <div class="regerv_btn">
+                                <a href="#" class="btn_2">Make an Appointment</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="reservation_img">
+                        <img src="img/reservation.png" alt="" class="reservation_img_iner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!--::regervation_part end::-->
+
+    <!--::blog_part start::-->
+    <!-- <section class="blog_part section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-8">
+                    <div class="section_tittle text-center">
+                        <h2>Our Blog</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src="img/blog/blog_2.png" class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a href="blog.html">
+                                    <h5 class="card-title">First cattle which earth unto let health for
+                                        can get and see what you </h5>
+                                </a>
+                                <ul>
+                                    <li> <span class="ti-user"></span>Jhon mike</li>
+                                    <li> <span class="ti-bookmark"></span>Clinic, doctors</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="single-home-blog">
+                        <div class="card">
+                            <img src="img/blog/blog_3.png" class="card-img-top" alt="blog">
+                            <div class="card-body">
+                                <a href="blog.html">
+                                    <h5 class="card-title">First cattle which earth unto let health for
+                                        can get and see what you </h5>
+                                </a>
+                                <ul>
+                                    <li> <span class="ti-user"></span>Jhon mike</li>
+                                    <li> <span class="ti-bookmark"></span>Clinic, doctors</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!--::blog_part end::-->
+
+    <!-- footer part start-->
+    <footer class="footer-area">
+        <div class="footer section_padding">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-2 col-md-4 col-sm-6 single-footer-widget">
+                        <a href="#" class="footer_logo"> <img src="img/logo.png" alt="#"> </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                        <div class="social_logo">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                            <a href="#"> <i class="ti-twitter"></i> </a>
+                            <a href="#"><i class="ti-instagram"></i></a>
+                            <a href="#"><i class="ti-skype"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Department</a></li>
+                            <li><a href="#"> Online payment</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Department</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-sm-6 col-md-4 single-footer-widget">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#">In the community</a></li>
+                            <li><a href="#">IU health foundation</a></li>
+                            <li><a href="#">Family support </a></li>
+                            <li><a href="#">Business solution</a></li>
+                            <li><a href="#">Community clinic</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-sm-6 col-md-6 single-footer-widget">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Lights were season</a></li>
+                            <li><a href="#"> Their is let wherein</a></li>
+                            <li><a href="#">which given over</a></li>
+                            <li><a href="#">Without given She</a></li>
+                            <li><a href="#">Isn two signs think</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-md-6 single-footer-widget">
+                        <h4>Newsletter</h4>
+                        <p>Seed good winged wherein which night multiply
+                            midst does not fruitful</p>
+                        <div class="form-wrap" id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+                                <input class="form-control" name="EMAIL" placeholder="Your Email Address"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+                                    required="" type="email">
+                                <button class="click-btn btn btn-default text-uppercase"> <i class="ti-angle-right"></i>
+                                </button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                        type="text">
+                                </div>
+
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright_part">
+            <div class="container">
+                <div class="row align-items-center">
+                    <p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                    <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"> <i class="ti-twitter"></i> </a>
+                        <a href="#"><i class="ti-instagram"></i></a>
+                        <a href="#"><i class="ti-skype"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
-  
-</div>
- 
-
-
 </template>
-
 <script>
-export default{
-    name:"PerfilUsuario"
-}
 
+export default {
+  name: 'PantallaPrincipal',
+  components: {
+
+  },
+  data:function(){
+    return{
+    
+
+  }
+  },
+  methods:{
+    login(){
+      if(this.usuario!="juan@hotmail.com"){
+        this.error=true
+      }else{
+        this.error=false
+      }
+      
+       if(this.contrasena!=123456) {
+        this.error2=true
+      }else{
+        this.error2=false
+      }
+
+	if(this.error==false && this.error2==false){
+		this.$router.push("perfil");
+	}
+    }
+  }
+}
 </script>
-<style scoped>
-#datos{
-  width: 100%;padding-left: 50px !important;
-    padding-right: 50px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-}
-body{margin-top:20px;
-background-color:#f2f6fc;
-color:#69707a;
-background: #ddd4d4 !important;
-}
-.img-account-profile {
-    height: 10rem;
-}
-.rounded-circle {
-    border-radius: 50% !important;
-}
-.card {
-    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
-}
-.card .card-header {
-    font-weight: 500;
-}
-.card-header:first-child {
-    border-radius: 0.35rem 0.35rem 0 0;
-}
-.card-header {
-    padding: 1rem 1.35rem;
-    margin-bottom: 0;
-    background-color: rgba(33, 40, 50, 0.03);
-    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
-}
-.form-control, .dataTable-input {
-    display: block;
-    width: 100%;
-    padding: 0.875rem 1.125rem;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1;
-    color: #69707a;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #c5ccd6;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0.35rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.nav-borders .nav-link.active {
-    color: #0061f2;
-    border-bottom-color: #0061f2;
-}
-.nav-borders .nav-link {
-    color: #69707a;
-    border-bottom-width: 0.125rem;
-    border-bottom-style: solid;
-    border-bottom-color: transparent;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
+<style >
+/* @import '../../public/css/bootstrap.min.css';
+@import '../../public/css/animate.css';
+@import '../../public/css/owl.carousel.min.css'; 
+@import '../../public/css/themify-icons.css';
+@import '../../public/css/flaticon.css'; 
+@import '../../public/css/magnific-popup.css';
+@import '../../public/css/nice-select.css';
+@import '../../public/css/slick.css';
+@import '../../public/css/style.css'; */
 </style>

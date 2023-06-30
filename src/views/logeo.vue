@@ -83,7 +83,7 @@ export default {
   }
 }
 </script>
-<style >
+<style scoped>
 #formulario{
   text-align: center;width: 100%;padding-top:140px
 }
