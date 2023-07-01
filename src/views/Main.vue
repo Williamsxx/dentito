@@ -86,7 +86,7 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="banner_img">
-                        <img src="img/banner_img.png" alt="">
+                        <img src="img/dentista.png" alt="">
                     </div>
                 </div>
             </div>
@@ -559,6 +559,10 @@ export default {
     
 
   }
+
+  },
+  mounted(){
+    document.body.style.background = 'white';
   },
   methods:{
     login(){
@@ -591,4 +595,5 @@ export default {
 @import '../../public/css/nice-select.css';
 @import '../../public/css/slick.css';
 @import '../../public/css/style.css'; */
+
 </style>

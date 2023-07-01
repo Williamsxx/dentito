@@ -50,9 +50,9 @@
 
 export default {
   name: 'LoginUser',
-  components: {
+//   components: {
 
-  },
+//   },
   data:function(){
     return{
       usuario:'',
@@ -62,6 +62,12 @@ export default {
 
   }
   },
+  mounted(){
+	// document.body.style.backgroundColor = '#f2f5fa'
+	document.body.style.backgroundImage = "url('img/fondo.jpg')";
+	document.body.style.backgroundSize = 'cover';  
+	document.body.style.backgroundRepeat = 'no-repeat';
+},
   methods:{
     login(){
       if(this.usuario!="juan@hotmail.com"){
@@ -271,5 +277,8 @@ body {
     font-weight: 900;
     margin-bottom: 30px;
     color: #4C489D;
+}
+#cuerpo{
+	background:black
 }
 </style>

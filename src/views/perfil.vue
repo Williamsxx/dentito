@@ -68,7 +68,7 @@
         </div>
         <div>
           <div class="card">
-          <h4 style="padding: 30px;">Hisotrial de Atenciones</h4>
+          <h4 style="padding: 30px;">Historial de Atenciones</h4>
           <table class="table ">
   <thead>
     <tr>
@@ -118,7 +118,11 @@
 
 <script>
 export default{
-    name:"PerfilUsuario"
+    name:"PerfilUsuario",
+
+  mounted(){
+	document.body.style.backgroundColor = '#f2f5fa';
+  },
 }
 
 </script>
