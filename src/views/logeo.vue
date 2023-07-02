@@ -97,7 +97,7 @@ export default {
   font-size: 15px;font-family: cursive;font-weight: 900;text-align: right;margin-top:10px
 }
 * {
-	box-sizing: border-bo232323232323x;
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;	
 	font-family: Raleway, sans-serif;
