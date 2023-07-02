@@ -54,7 +54,7 @@
                                 </li>
                                 <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;">
                                 <li class="nav-item">
-                                    <a class="nav-link" >Registrate</a>
+                                    <a class="nav-link" >Ingresar</a>
                                 </li>
                             </router-link>
                             </ul>
