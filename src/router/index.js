@@ -4,6 +4,7 @@ import Logeo from '../views/logeo.vue'
 import Perfil from '../views/perfil.vue'
 import Cita from '../views/cita.vue'
 import Main from '../views/main.vue'
+import Admin from '../views/administrador.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,6 +27,11 @@ const routes = [
     path: '/cita',
     name: 'reservarCita',
     component: Cita
+  },
+  {
+    path: '/admin',
+    name: 'adminDentito',
+    component: Admin
   },
 
 ]
