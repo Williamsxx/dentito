@@ -1,9 +1,9 @@
 (function ($) {
   "use strict";
 
-  $(document).ready(function() {
-    $('select').niceSelect();
-  });
+  // $(document).ready(function() {
+  //   $('select').niceSelect();
+  // });
   // menu fixed js code
   $(window).scroll(function () {
     var window_top = $(window).scrollTop() + 1;
@@ -14,9 +14,9 @@
     }
   });
 
-$(document).ready(function() {
-  $('select').niceSelect();
-});
+// $(document).ready(function() {
+//   $('select').niceSelect();
+// });
 
 var review = $('.client_review_part');
 if (review.length) {

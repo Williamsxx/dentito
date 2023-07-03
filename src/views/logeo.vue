@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="container">
+    <div class="container contenedor">
 	<div class="screen">
 		<div class="screen__content">
 			<form id ="formulario" class="login" v-on:submit.prevent="login">
@@ -89,7 +89,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style >
 #formulario{
   text-align: center;width: 100%;padding-top:140px
 }
@@ -107,7 +107,7 @@ body {
 	background: linear-gradient(90deg, #C7C5F4, #776BCC);		
 }
 
-.container {
+.contenedor {
 	display: flex;
 	align-items: center;
 	justify-content: center;

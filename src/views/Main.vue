@@ -549,6 +549,7 @@ Copyright &copy;All rights reserved | This template is made with <i class="ti-he
 </template>
 <script>
 
+
 export default {
   name: 'PantallaPrincipal',
   components: {
@@ -585,15 +586,3 @@ export default {
   }
 }
 </script>
-<style >
-/* @import '../../public/css/bootstrap.min.css';
-@import '../../public/css/animate.css';
-@import '../../public/css/owl.carousel.min.css'; 
-@import '../../public/css/themify-icons.css';
-@import '../../public/css/flaticon.css'; 
-@import '../../public/css/magnific-popup.css';
-@import '../../public/css/nice-select.css';
-@import '../../public/css/slick.css';
-@import '../../public/css/style.css'; */
-
-</style>
