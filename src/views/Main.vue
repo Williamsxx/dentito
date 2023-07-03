@@ -586,3 +586,9 @@ export default {
   }
 }
 </script>
+<style>
+.feature_part .single_feature_part span {
+
+    margin-left: 160px;
+}
+</style>
