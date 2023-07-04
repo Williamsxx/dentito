@@ -794,7 +794,7 @@
                     </div>
                
                 </div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">LISTA DE CITAS</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">LISTA343434 DE CITAS</div>
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">LISTA DE MEDICINAS</div>
             </div>
 
