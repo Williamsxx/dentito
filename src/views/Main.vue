@@ -14,52 +14,44 @@
 
                         <div class="collapse navbar-collapse main-menu-item justify-content-center"
                             id="navbarSupportedContent">
-                            <ul class="navbar-nav align-items-center">
-                                <li class="nav-item active">
+                            <ul style="width: 85%;" class="navbar-nav align-items-center">
+                                <li style="width: 120%;" class="nav-item active">
                                     <a class="nav-link" >Inicio</a>
                                 </li>
-                                <li class="nav-item">
+                                <li style="width: 120%;" class="nav-item">
                                     <a class="nav-link">Nosotros</a>
                                 </li>
-                                <li class="nav-item">
+                                <li style="width: 120%;" class="nav-item">
                                     <a class="nav-link" >Especialidades</a>
                                 </li>
 
-                                <li class="nav-item dropdown">
+                                <li style="width: 120%;" class="nav-item dropdown">
                                     <a class="nav-link" >Doctores</a>
-                                    <!-- <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="services.html">services</a>
-                                        <a class="dropdown-item" href="dep.html">depertments</a>
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
-                                    </div> -->
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" >Blog</a>
-                                    <!-- <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_1"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                        <a class="dropdown-item" href="blog.html">blog</a>
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                    </div> -->
+                                <li style="width: 120%;" class="nav-item dropdown">
+                                    <a class="nav-link"  >Blog</a>
                                 </li>
 
-                                <li class="nav-item">
+                                <li style="width: 120%;" class="nav-item">
                                     <a class="nav-link" >Contacto</a>
                                 </li>
-                                <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;">
-                                <li class="nav-item">
-                                    <a class="nav-link" >Registrate</a>
-                                </li>
+                                <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;width: 120%" >
+                                    <div  class="dropdown">
+                             
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >Ingresar</a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        
+                                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                        <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                                    </ul>
+                             
+                            </div>
                             </router-link>
                             </ul>
                         </div>
+                  
                         <a class="btn_2 d-none d-lg-block" href="#">Contactenos: 999999999</a>
+                
                     </nav>
                 </div>
             </div>
@@ -549,6 +541,7 @@ Copyright &copy;All rights reserved | This template is made with <i class="ti-he
 </template>
 <script>
 
+
 export default {
   name: 'PantallaPrincipal',
   components: {
@@ -585,15 +578,28 @@ export default {
   }
 }
 </script>
-<style >
-/* @import '../../public/css/bootstrap.min.css';
-@import '../../public/css/animate.css';
-@import '../../public/css/owl.carousel.min.css'; 
-@import '../../public/css/themify-icons.css';
-@import '../../public/css/flaticon.css'; 
-@import '../../public/css/magnific-popup.css';
-@import '../../public/css/nice-select.css';
-@import '../../public/css/slick.css';
-@import '../../public/css/style.css'; */
+<style>
+.feature_part .single_feature_part span {
+
+    margin-left: 160px;
+}
+#dropdownMenuLink{
+    color: #242429;
+    font-size: 14px;
+    font-family: "Playfair Display", serif;
+    line-height: 13px;
+    text-transform: capitalize;
+}
+.dropdown-menu {
+
+  top: 35px; 
+  left: 24px; 
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+
+    top: 35px; 
+  left: 24px; 
+  margin-top: 0px; 
+}
 
 </style>
