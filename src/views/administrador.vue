@@ -20,12 +20,12 @@
         </nav>
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a style="text-align: left;text-decoration: none;" href="index3.html" class="brand-link">
+        <router-link :to="{ name: 'main' }" style="text-decoration: none;font-weight: normal;">
+            <a style="text-align: left;text-decoration: none;"  href="" class="brand-link">
                 <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Dentito</span>
             </a>
-
+        </router-link>
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
