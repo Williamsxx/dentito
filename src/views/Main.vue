@@ -35,16 +35,26 @@
                                 <li style="width: 120%;" class="nav-item">
                                     <a class="nav-link" >Contacto</a>
                                 </li>
-                                <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;width: 120%" >
+                                <li v-if="user!=null && password!=null"  class="nav-item">
                                     <div  class="dropdown">
                              
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >Ingresar</a>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >Paciente</a>
+                                    <ul class="dropdown-menu primero" aria-labelledby="dropdownMenuLink">
+                                        <router-link :to="{ name: 'perfilDentito' }" style="text-decoration: none;font-weight: normal;" >
+
                                         <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                        <li><a class="dropdown-item" href="#">Cerrar sesion</a></li>
+                                        </router-link>
+                                        <li><a class="dropdown-item" @click="cerrarSesion()" href="#">Cerrar sesion</a></li>
                                     </ul>
                              
-                            </div>
+                                </div>
+                                </li>
+                                <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;width: 106.5%" v-else>
+                                <li class="nav-item">
+                             
+                                    <a class="nav-link"  >Ingresar</a>
+                          
+                                </li>
                             </router-link>
                             </ul>
                         </div>
@@ -68,9 +78,16 @@
                             <h5>Estamos Aquí Para Su Cuidado</h5>
                             <h1>Mejor Atención y Mejores Médicos</h1>
                             <p>"En nuestra clínica odontológica, nos enorgullece ofrecer servicios de alta calidad y atención personalizada para el cuidado de tu salud bucal. Nuestro equipo de profesionales altamente capacitados está comprometido en brindarte los mejores tratamientos dentales para que puedas lucir y sentir una sonrisa radiante."</p>
-                            <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;">
+                            
+                      
+                            <router-link :to="{ name: 'reservarCita' }" style="text-decoration: none;font-weight: normal;" v-if="user!=null && password!=null">
                             <a href="#" class="btn_2">Reservar Cita</a>
                             </router-link>
+                            <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;" v-else>
+                            <a href="#" class="btn_2">Reservar Cita</a>
+                            </router-link>
+                      
+                        
 
                         </div>
                     </div>
@@ -97,11 +114,8 @@
                 <div class="col-md-6 col-lg-5">
                     <div class="about_us_text">
                         <h2>Nosotros</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                            Quis ipsum suspendisse ultrices gravida. Risus cmodo viverra
-                            maecenas accumsan lacus vel</p>
-                        <a class="btn_2 " href="#">learn more</a>
+                        <p>Nos esforzamos por establecer relaciones de confianza con nuestros pacientes, escuchando sus inquietudes y brindando un enfoque personalizado en cada consulta. Nuestro objetivo es educar a nuestros pacientes sobre la importancia de la higiene bucal y proporcionarles las herramientas y el conocimiento necesarios para mantener una sonrisa saludable de por vida.</p>
+                        <a class="btn_2 " href="#">leer mas</a>
                         <div class="banner_item">
                             <div class="single_item">
                                 <img src="img/icon/banner_1.svg" alt="">
@@ -188,7 +202,7 @@
                     <div class="depertment_content">
                         <div class="row justify-content-center">
                             <div class="col-xl-8">
-                                <h2>Our Depertment</h2>
+                                <h2>Nuestra Clinica</h2>
                                 <div class="row">
                                     <div class="col-lg-6 col-sm-6">
                                         <div class="single_our_depertment">
@@ -336,119 +350,6 @@
             </div>
         </div>
     </section>
-    <!--::doctor_part end::-->
-
-    <!--::regervation_part start::-->
-    <!-- <section class="regervation_part section_padding">
-        <div class="container">
-            <div class="row align-items-center regervation_content">
-                <div class="col-lg-7">
-                    <div class="regervation_part_iner">
-                        <form>
-                            <h2>Make an Appointment</h2>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="password" class="form-control" id="inputPassword4"
-                                        placeholder="Email address">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <select class="form-control" id="Select">
-                                        <option value="1" selected>Select service</option>
-                                        <option value="2">Name of service</option>
-                                        <option value="3">Name of service</option>
-                                        <option value="4">Name of service</option>
-                                        <option value="5">Name of service</option>
-                                    </select>
-                                </div>
-                                <div class="form-group time_icon col-md-6">
-                                    <select class="form-control" id="Select2">
-                                        <option value="" selected>Time</option>
-                                        <option value="1">8 AM TO 10AM</option>
-                                        <option value="1">10 AM TO 12PM</option>
-                                        <option value="1">12PM TO 2PM</option>
-                                        <option value="1">2PM TO 4PM</option>
-                                        <option value="1">4PM TO 6PM</option>
-                                        <option value="1">6PM TO 8PM</option>
-                                        <option value="1">4PM TO 10PM</option>
-                                        <option value="1">10PM TO 12PM</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <textarea class="form-control" id="Textarea" rows="4"
-                                        placeholder="Your Note "></textarea>
-                                </div>
-                            </div>
-                            <div class="regerv_btn">
-                                <a href="#" class="btn_2">Make an Appointment</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6">
-                    <div class="reservation_img">
-                        <img src="img/reservation.png" alt="" class="reservation_img_iner">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--::regervation_part end::-->
-
-    <!--::blog_part start::-->
-    <!-- <section class="blog_part section_padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-8">
-                    <div class="section_tittle text-center">
-                        <h2>Our Blog</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="img/blog/blog_2.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <a href="blog.html">
-                                    <h5 class="card-title">First cattle which earth unto let health for
-                                        can get and see what you </h5>
-                                </a>
-                                <ul>
-                                    <li> <span class="ti-user"></span>Jhon mike</li>
-                                    <li> <span class="ti-bookmark"></span>Clinic, doctors</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <div class="single-home-blog">
-                        <div class="card">
-                            <img src="img/blog/blog_3.png" class="card-img-top" alt="blog">
-                            <div class="card-body">
-                                <a href="blog.html">
-                                    <h5 class="card-title">First cattle which earth unto let health for
-                                        can get and see what you </h5>
-                                </a>
-                                <ul>
-                                    <li> <span class="ti-user"></span>Jhon mike</li>
-                                    <li> <span class="ti-bookmark"></span>Clinic, doctors</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--::blog_part end::-->
-
-    <!-- footer part start-->
     <footer class="footer-area">
         <div class="footer section_padding">
             <div class="container">
@@ -548,31 +449,22 @@ export default {
   },
   data:function(){
     return{
-    
+    user:null,
+    password:null,
 
   }
 
   },
   mounted(){
     document.body.style.background = 'white';
+    this.user=localStorage.getItem("user")
+    this.password=localStorage.getItem("password")
+    console.log(this.user,this.password)
   },
   methods:{
-    login(){
-      if(this.usuario!="juan@hotmail.com"){
-        this.error=true
-      }else{
-        this.error=false
-      }
-      
-       if(this.contrasena!=123456) {
-        this.error2=true
-      }else{
-        this.error2=false
-      }
-
-	if(this.error==false && this.error2==false){
-		this.$router.push("perfil");
-	}
+    cerrarSesion(){
+        localStorage.clear()
+        window.location.reload()
     }
   }
 }
@@ -589,16 +481,17 @@ export default {
     line-height: 13px;
     text-transform: capitalize;
 }
-.dropdown-menu {
+.dropdown-menu .primero{
 
-  top: 35px; 
+  top: 30px !important; 
   left: 24px; 
 }
 .navbar-expand-lg .navbar-nav .dropdown-menu {
 
-    top: 35px; 
-  left: 24px; 
-  margin-top: 0px; 
+    top: 67px; 
+  left: 22px; 
+  margin-top:0 !important
+
 }
 
 </style>
