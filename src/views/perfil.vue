@@ -86,24 +86,24 @@
                             </p>
                         </a>
 
-                        <a v-if="user=='jhon@hotmail.com'" class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-atencionesodontologo" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
-                            <i class="nav-icon fa fa-file"></i>
+                        <!-- <a v-if="user=='jhon@hotmail.com'" class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-atencionesodontologo" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
+                            <i class="nav-icon fas fa-file-alt"></i>
                             <p>
                                 Atenciones
                             </p>
-                        </a>
-                        <a v-if="user=='juan@hotmail.com' || user=='manuel@hotmail.com'" class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-citas" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
-                            <i class="nav-icon fa fa-file"></i>
+                        </a> -->
+                        <a  class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-citas" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
+                            <i class="nav-icon fas fa-file-alt"></i>
                             <p>
-                                Mis Citas
+                                Citas
                             </p>
                         </a>
-                        <a v-if="user=='juan@hotmail.com' || user=='manuel@hotmail.com'"  class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-atenciones" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
-                            <i class="nav-icon fa fa-file"></i>
+                        <!-- <a v-if="user=='juan@hotmail.com' || user=='manuel@hotmail.com'"  class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-atenciones" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
+                            <i class="nav-icon fas fa-file-alt"></i>
                             <p>
                                 Mis Atenciones
                             </p>
-                        </a>
+                        </a> -->
                         <a v-if="user=='juan@hotmail.com'" class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-medicos" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
                             <i class="nav-icon fas fa-user-md"></i>
                             <p>
@@ -115,16 +115,15 @@
                             <i class="nav-icon fas fa-user-alt"></i>
                             <p>
                                 Pacientes
-                                <!-- <i class="fas fa-angle-left right"></i> -->
                             </p>
                         </a>
 
-                        <a v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-citasodontologo" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                        <!-- <a v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-citasodontologo" role="tab" aria-controls="v-pills-messages" aria-selected="false">
                             <i class="nav-icon fas fa-edit"></i>
                             <p>
                                 Citas
                             </p>
-                        </a>
+                        </a> -->
 
                         <a v-if="user=='juan@hotmail.com'" class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
                             <i class="nav-icon fas fa-tooth"></i>
@@ -167,10 +166,18 @@
                                             src="img/user2-160x160.jpg"
                                             alt="User profile picture">
                                         </div>
-
-                                        <h3 style="margin-top: 30px;" class="profile-username text-center">Juan Ramirez</h3>
-
+                                        <div v-if="user=='juan@hotmail.com'">
+                                        <h3 style="margin-top: 30px;" class="profile-username text-center">Juan Mamani</h3>
                                         <p class="text-muted text-center">Administrador</p>
+                                        </div>
+                                        <div v-else-if="user=='jhon@hotmail.com'">
+                                        <h3 style="margin-top: 30px;" class="profile-username text-center">Jhon Quispe</h3>
+                                        <p class="text-muted text-center">Odontologo</p>
+                                        </div>
+                                        <div v-else>
+                                        <h3 style="margin-top: 30px;" class="profile-username text-center">Manuel Gonzales</h3>
+                                        <p class="text-muted text-center">Paciente</p>
+                                        </div>
                                         <label for="formFile" style="font-size: 17px;" class="form-label">Subir Imagen</label>
                                             <input class="form-control" type="file" id="formFile">
                                         <!-- <a href="#"  class="btn btn-primary btn-block"><b style="color: white;">Subir Imagen</b></a> -->
@@ -306,13 +313,9 @@
                                         <h1>LISTA DE PACIENTES</h1>
                                     </div>
                                     <div style="margin-top: -37px;" class="col-sm-12">
-                                   
                                         <ol id="paciente" @click="quitarAtributo()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
                                             <button id="botonagregar" type="button" data-bs-toggle="pill" data-bs-target="#profile" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-user-plus'></i>Agregar Paciente</button>
-    
                                         </ol>
-                                 
-                                   
                                     </div>
                                 </div>
                             </div>
@@ -323,10 +326,6 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card">
-                                            <!-- <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
-              </div> -->
-                                            <!-- /.card-header -->
                                             <div class="card-body">
                                                 <table id="example2" class="table table-bordered table-hover">
                                                     <thead>
@@ -356,7 +355,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -374,7 +374,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -392,7 +393,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -410,7 +412,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -428,7 +431,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -447,7 +451,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -465,7 +470,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -483,7 +489,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -501,7 +508,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -519,7 +527,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -537,7 +546,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -555,7 +565,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -573,7 +584,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -591,7 +603,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -609,7 +622,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -627,7 +641,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -645,7 +660,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -663,7 +679,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -681,7 +698,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -733,7 +751,7 @@
                                     <div style="margin-top: -37px;" class="col-sm-12">
                                    
                                         <ol id="paciente" @click="quitarAtributo2()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
-                                            <button id="botonagregar2" type="button" data-bs-toggle="pill" data-bs-target="#v-pills-profile" class="btn btn-primary"><i style="margin-right: 6px;" class='fa fa-file'></i>Lista de Pacientes</button>
+                                            <button id="botonagregar2" type="button" data-bs-toggle="pill" data-bs-target="#v-pills-profile" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Lista de Pacientes</button>
     
                                         </ol>
                                  
@@ -884,7 +902,7 @@
                     </div>
                
                 </div>
-                <div class="tab-pane fade" id="atencion" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <div class="tab-pane fade" id="agregarcita" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                
                <div style="margin: 0px;" class="content-wrapper">
                        <!-- Content Header (Page header) -->
@@ -892,12 +910,12 @@
                        <div class="container-fluid">
                            <div class="row mb-2">
                                <div class="col-sm-12">
-                                   <h1>REGISTRAR ATENCION</h1>
+                                   <h1>REGISTRAR CITA</h1>
                                </div>
                                <div style="margin-top: -37px;" class="col-sm-12">
                               
-                                   <ol id="paciente" @click="quitarAtributo3()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
-                                       <button id="botonagregar3" type="button" data-bs-toggle="pill" data-bs-target="#v-pills-atencionesodontologo" class="btn btn-primary"><i style="margin-right: 6px;" class='fa fa-file'></i>Lista de Atenciones</button>
+                                   <ol id="paciente" @click="quitarAtributo6()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
+                                       <button id="botonagregar6" type="button" data-bs-toggle="pill" data-bs-target="#v-pills-citas" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Lista de Citas</button>
 
                                    </ol>
                             
@@ -922,7 +940,7 @@
                                        alt="User profile picture">
                                    </div>
 
-                                   <h3 style="margin-top: 30px;" class="profile-username text-center">Usuario</h3>
+                                   <h3 style="margin-top: 30px;" class="profile-username text-center">Nuevo Usuario</h3>
 
                                    <p class="text-muted text-center">Paciente</p>
                                    <label for="formFile" style="font-size: 17px;" class="form-label">Subir Imagen</label>
@@ -948,32 +966,29 @@
                                <div class="card-body">
                                    <div class="tab-content">
                                    <div class="active tab-pane" id="settings">
-                                       <form class="form-horizontal" v-on:submit.prevent="registrar2">
-                                        <div class="form-group row">
-                                           <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
-                                           <div class="col-sm-10">
-                                           <input type="text" class="form-control" id="inputName2" placeholder="DNI" v-model="dni">
-                                           <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
-                                           <div style="text-align: left;margin-top: 10px;">
-                                           <button type="button" class="btn btn-success">Buscar Paciente</button>
-                                            </div>
-
-                                           </div>
-                                       </div>
+                                       <form class="form-horizontal" v-on:submit.prevent="registrar">
                                        <div class="form-group row">
                                            <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                            <div class="col-sm-10">
                                            <input type="text" class="form-control" id="inputName" placeholder="Nombres" v-model="nombres">
                                            <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
-                                      
                                            </div>
                                          
                                        </div>
+
                                        <div class="form-group row">
                                            <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                            <div class="col-sm-10">
                                            <input type="text" class="form-control" id="inputEmail" placeholder="Apellidos" v-model="apellidos">
                                            <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+                                           </div>
+                                       </div>
+                                       <div class="form-group row">
+                                           <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
+                                           <div class="col-sm-10">
+                                           <input type="text" class="form-control" id="inputName2" placeholder="DNI" v-model="dni">
+                                           <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                            </div>
                                        </div>
@@ -1011,17 +1026,17 @@
                                            </div>
                                        </div>
                                        <div class="form-group row">
+                                           <label for="inputSkills" class="col-sm-2 col-form-label">Telefono (Emergencia)</label>
+                                           <div class="col-sm-10">
+                                           <input type="number" class="form-control" id="inputSkills" placeholder="Telefono Emergencia" v-model="telefonoemer">
+                                           <p v-if="telefonoemer==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                           </div>
+                                       </div>
+                                       <div class="form-group row">
                                            <label for="inputName2" class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
                                            <div class="col-sm-10">
                                            <input type="date" class="form-control" id="inputName2" placeholder="Fecha de Nacimiento" v-model="fechanac">
                                            <p v-if="fechanac==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
-                                           </div>
-                                       </div>
-                                       <div class="form-group row">
-                                           <label for="inputSkills" class="col-sm-2 col-form-label">Fecha y hora de atencion</label>
-                                           <div class="col-sm-10">
-                                           <input type="number" class="form-control" id="inputSkills" placeholder="Fecha y hora de atencion" v-model="fechaatencion">
-                                           <p v-if="fechaatencion==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                            </div>
                                        </div>
                                        <div class="form-group row">
@@ -1051,14 +1066,20 @@
                </div>
           
            </div>
+                
+                
                 <div class="tab-pane fade" id="v-pills-citas" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <div id="listaPacientes" class="nav-bar-transition">
-                        <!-- Content Header (Page header) -->
                         <section class="content-header">
                             <div class="container-fluid">
                                 <div class="row mb-2">
                                     <div class="col-sm-12">
-                                        <h1>MIS CITAS</h1>
+                                        <h1>LISTA DE CITAS</h1>
+                                    </div>
+                                    <div style="margin-top: -37px;" class="col-sm-12">
+                                        <ol id="paciente" @click="quitarAtributo5()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
+                                            <button id="botonagregar5" type="button" data-bs-toggle="pill" data-bs-target="#agregarcita" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Agregar Cita</button>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
@@ -1069,10 +1090,6 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card">
-                                            <!-- <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
-              </div> -->
-                                            <!-- /.card-header -->
                                             <div class="card-body">
                                                 <table id="example3" class="table table-bordered table-hover">
                                                     <thead>
@@ -1100,10 +1117,20 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>
+                                                            
+                                                                </div>
+                                                                 
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1118,9 +1145,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                              
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1136,9 +1172,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1154,9 +1199,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1172,9 +1226,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1191,9 +1254,18 @@
                                                       
                                                             <td>    
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                              
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1209,9 +1281,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                              
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1227,9 +1308,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1245,9 +1335,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1263,9 +1362,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1281,9 +1389,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1299,9 +1416,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                              
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1317,9 +1443,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                              
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1335,9 +1470,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1353,9 +1497,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1371,9 +1524,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                 </div>
 
                                                             </td>
                                                         </tr>
@@ -1389,9 +1551,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                               
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1407,9 +1578,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                              
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1425,9 +1605,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                             
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1443,9 +1632,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>
+                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
+                                                                    </div>
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    </div>                                                              
                                                                 </div>
 
                                                             </td>
@@ -1453,427 +1650,10 @@
                                                     </tbody>
                                                 </table>
                                             </div>
-                                            <!-- /.card-body -->
                                         </div>
                                     </div>
-                                    <!-- /.col -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.container-fluid -->
-                        </section>
-                    </div>
-                    </div>
-                    <div class="tab-pane fade" id="v-pills-atenciones" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div id="listaPacientes" class="nav-bar-transition">
-                        <!-- Content Header (Page header) -->
-                        <section class="content-header">
-                            <div class="container-fluid">
-                                <div class="row mb-2">
-                                    <div class="col-sm-12">
-                                        <h1>MIS ATENCIONES</h1>
-                                    </div>
                                 </div>
                             </div>
-                        </section>
-
-                        <section class="content">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <!-- <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
-              </div> -->
-                                            <!-- /.card-header -->
-                                            <div class="card-body">
-                                                <table id="example4" class="table table-bordered table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Nro</th>
-                                                            <th>Nombres</th>
-                                                            <th>Apellidos</th>
-                                                            <th>Documento</th>
-                                                            <th>Direccion</th>
-                                                            <th>Email</th>
-                                                            <th>Estado</th>
-                                                            <th>Acciones</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>4</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>5</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>6</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                      
-                                                            <td>    
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>7</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>8</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>9</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>10</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>11</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>12</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>13</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>14</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>15</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>16</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>17</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>18</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>19</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>20</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>
-                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <!-- /.card-body -->
-                                        </div>
-                                    </div>
-                                    <!-- /.col -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.container-fluid -->
                         </section>
                     </div>
                     </div>
@@ -1904,10 +1684,6 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="card">
-                                            <!-- <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
-              </div> -->
-                                            <!-- /.card-header -->
                                             <div class="card-body">
                                                 <table id="example5" class="table table-bordered table-hover">
                                                     <thead>
@@ -1937,7 +1713,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1955,7 +1732,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1973,7 +1751,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -1991,7 +1770,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2009,7 +1789,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2028,7 +1809,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2046,7 +1828,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2064,7 +1847,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2082,7 +1866,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2100,7 +1885,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2118,7 +1904,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2136,7 +1923,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2154,7 +1942,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2172,7 +1961,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2190,7 +1980,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2208,7 +1999,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2226,7 +2018,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2244,7 +2037,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2262,7 +2056,8 @@
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
+                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                
+                                                                </div>
 
                                                             </td>
                                                         </tr>
@@ -2299,416 +2094,6 @@
                         </section>
                     </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-citasodontologo" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div id="listaPacientes" class="nav-bar-transition">
-                        <!-- Content Header (Page header) -->
-                        <section class="content-header">
-                            <div class="container-fluid">
-                                <div class="row mb-2">
-                                    <div class="col-sm-12">
-                                        <h1>LISTA DE CITAS</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="content">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <table id="example6" class="table table-bordered table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Nro</th>
-                                                            <th>Nombres</th>
-                                                            <th>Apellidos</th>
-                                                            <th>Documento</th>
-                                                            <th>Direccion</th>
-                                                            <th>Email</th>
-                                                            <th>Estado</th>
-                                                            <th>Acciones</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>3</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>4</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>5</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>6</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                      
-                                                            <td>    
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>7</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>8</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>9</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>10</td>
-                                                            <td>Pedro </td>
-                                                            <td>Mamani Ramirez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>11</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>12</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>13</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>14</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>15</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>16</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>17</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>18</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>19</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>20</td>
-                                                            <td>Lucho Manuel</td>
-                                                            <td>Quispe Fernandez</td>
-                                                            <td>123456</td>
-                                                            <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
-                                                            <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
-                                                            </td>
-                                                            <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 50%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <button style="margin-top: 5px;width: 50%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button>
-                                                                </div>
-
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <!-- /.card-body -->
-                                        </div>
-                                    </div>
-                                    <!-- /.col -->
-                                </div>
-                                <!-- /.row -->
-                            </div>
-                            <!-- /.container-fluid -->
-                        </section>
-                    </div>
-                    </div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">LISTA DE CITAS</div>
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">LISTA DE MEDICINAS</div>
             </div>
 
@@ -2913,6 +2298,12 @@ export default {
         },
         quitarAtributo3(){
             $("#botonagregar3").removeClass("active")
+        },
+        quitarAtributo5(){
+            $("#botonagregar5").removeClass("active")
+        },
+        quitarAtributo6(){
+            $("#botonagregar6").removeClass("active")
         },
         listaPacientes3(){
 

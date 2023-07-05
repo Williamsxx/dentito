@@ -38,7 +38,8 @@
                                 <li v-if="user!=null && password!=null"  class="nav-item">
                                     <div  class="dropdown">
                              
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >Paciente</a>
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >Cuenta</a>
+                                                                                                                                                                     
                                     <ul class="dropdown-menu primero" aria-labelledby="dropdownMenuLink">
                                         <router-link :to="{ name: 'perfilDentito' }" style="text-decoration: none;font-weight: normal;" >
 
@@ -49,7 +50,7 @@
                              
                                 </div>
                                 </li>
-                                <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;width: 106.5%" v-else>
+                                <router-link :to="{ name: 'loginn' }" style="text-decoration: none;font-weight: normal;width: 97.5%" v-else>
                                 <li class="nav-item">
                              
                                     <a class="nav-link"  >Ingresar</a>
@@ -459,7 +460,6 @@ export default {
     document.body.style.background = 'white';
     this.user=localStorage.getItem("user")
     this.password=localStorage.getItem("password")
-    console.log(this.user,this.password)
   },
   methods:{
     cerrarSesion(){

@@ -302,7 +302,5 @@ body {
     color: #4C489D;
 }
 
-#cuerpo {
-    background: black
-}
+
 </style>
