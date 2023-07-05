@@ -1117,18 +1117,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
                                                                     </div>
-                                                            
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
                                                                  
                                                             </td>
@@ -1145,17 +1144,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                              
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1172,17 +1171,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1199,17 +1198,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1226,17 +1225,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1249,22 +1248,22 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                       
                                                             <td>    
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                              
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1277,23 +1276,22 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                              
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
-
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1304,23 +1302,22 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                                
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
-
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1331,21 +1328,21 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1358,21 +1355,21 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1389,17 +1386,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1416,19 +1413,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                              
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
-
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1443,19 +1439,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                              
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
-
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1470,17 +1465,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1497,19 +1492,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
-
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1524,19 +1518,18 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
-                                                                 </div>
-
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                </div>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1551,17 +1544,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                               
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1578,17 +1571,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                              
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1605,17 +1598,17 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                             
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
 
                                                             </td>
@@ -1628,23 +1621,22 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <button style="width: 80%;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Desactivar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
+                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                    </div>  
+                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
                                                                     <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
                                                                     </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                    </div>                                                              
+                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
+                                                                    </div>
+                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
                                                                 </div>
-
                                                             </td>
                                                         </tr>
                                                     </tbody>
