@@ -1117,7 +1117,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1144,7 +1144,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1171,7 +1171,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1198,7 +1198,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1225,7 +1225,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1253,7 +1253,7 @@
                                                       
                                                             <td>    
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1280,7 +1280,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1306,7 +1306,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1332,7 +1332,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1359,7 +1359,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1386,7 +1386,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1413,7 +1413,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1439,7 +1439,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1465,7 +1465,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1492,7 +1492,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1518,7 +1518,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1544,7 +1544,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1571,7 +1571,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1598,7 +1598,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
@@ -1625,7 +1625,7 @@
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;" v-if="user=='manuel@hotmail.com' || user=='juan@hotmail.com'">
+                                                                    <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
                                                                     <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
