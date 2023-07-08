@@ -104,17 +104,16 @@
                                 Mis Atenciones
                             </p>
                         </a> -->
+                        <a v-if="user=='juan@hotmail.com'" class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <i class="nav-icon fas fa-user-alt"></i>
+                            <p>
+                                Usuarios
+                            </p>
+                        </a>
                         <a v-if="user=='juan@hotmail.com'" class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-medicos" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
                             <i class="nav-icon fas fa-user-md"></i>
                             <p>
                                 Odontologos
-                            </p>
-                        </a>
-
-                        <a v-if="user=='juan@hotmail.com'" class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                            <i class="nav-icon fas fa-user-alt"></i>
-                            <p>
-                                Pacientes
                             </p>
                         </a>
 
@@ -310,11 +309,11 @@
                             <div class="container-fluid">
                                 <div class="row mb-2">
                                     <div class="col-sm-12">
-                                        <h1>LISTA DE PACIENTES</h1>
+                                        <h1>LISTA DE USUARIOS</h1>
                                     </div>
                                     <div style="margin-top: -37px;" class="col-sm-12">
                                         <ol id="paciente" @click="quitarAtributo()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
-                                            <button id="botonagregar" type="button" data-bs-toggle="pill" data-bs-target="#profile" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-user-plus'></i>Agregar Paciente</button>
+                                            <button id="botonagregar" type="button" data-bs-toggle="pill" data-bs-target="#profile" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-user-plus'></i>Agregar Usuario</button>
                                         </ol>
                                     </div>
                                 </div>
@@ -751,7 +750,7 @@
                                     <div style="margin-top: -37px;" class="col-sm-12">
                                    
                                         <ol id="paciente" @click="quitarAtributo2()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
-                                            <button id="botonagregar2" type="button" data-bs-toggle="pill" data-bs-target="#v-pills-profile" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Lista de Pacientes</button>
+                                            <button id="botonagregar2" type="button" data-bs-toggle="pill" data-bs-target="#v-pills-profile" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Lista de Usuarios</button>
     
                                         </ol>
                                  
@@ -795,14 +794,15 @@
                                
                                         <div class="card-header p-2">
                                                 <ul class="nav nav-pills">
-                                                <li class="nav-item"><a class="nav-link active" href="#settings" data-toggle="tab">Datos Personales</a></li>
+                                                <li class="nav-item"><a id="datoss" class="nav-link active" href="#personales" data-toggle="tab">Datos Personales</a></li>
+                                                <li  class="nav-item"><a id="usuarioo" class="nav-link" href="#usuario" data-toggle="tab">Datos de Usuario</a></li>
                                                 </ul>
                                             </div>
                                 
                                     <div class="card-body">
                                         <div class="tab-content">
-                                        <div class="active tab-pane" id="settings">
-                                            <form class="form-horizontal" v-on:submit.prevent="registrar">
+                                        <div class="active tab-pane" id="personales">
+                                         
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
@@ -887,7 +887,41 @@
                              
                                             <div class="form-group row">
                                                 <div class="offset-sm-2 col-sm-10" style="text-align: left;">
-                                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                                <button @click="siguiente()" style="background-color: var(--bs-btn-bg);" id="siguientee" href="#usuario" data-toggle="tab" class="btn btn-primary">Siguiente</button>
+                                                </div>
+                                            </div>
+                                  
+                                        </div>
+                                        <div class="tab-pane" id="usuario" v-on:submit.prevent="registrar">
+                                            <form class="form-horizontal">
+                                            <div class="form-group row">
+                                                <label for="inputName" class="col-sm-2 col-form-label">Correo Electronico</label>
+                                                <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="inputName" placeholder="Correo Electronico" v-model="usuario2">
+                                                <p v-if="usuario2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputEmail" class="col-sm-2 col-form-label">Contraseña</label>
+                                                <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="inputEmail" placeholder="Contraseña" v-model="contrasenaa1">
+                                                <p v-if="contrasenaa1==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Confirmar Contraseña</label>
+                                                <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="inputName2" placeholder="Conformar Contraseña" v-model="contrasenaa2">
+                                                <p v-if="contrasenaa2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+
+                                                <div class="offset-sm-2 col-sm-10" style="text-align: left;">
+                                                <button class="btn btn-primary" style="background-color: var(--bs-btn-bg);" id="anteriorr" @click="removerclase()" href="#personales" data-toggle="tab">Anterior</button>
+                                                <button style="margin-left: 10px;" class="btn btn-primary" type="submit">Registrar</button>
                                                 </div>
                                             </div>
                                             </form>
@@ -1116,7 +1150,24 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div >
+                                                                        <button type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
+                                                                </div> 
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a class="dropdown-item" href="#">Atendido</a>
+                                                                    <a class="dropdown-item" href="#">Activar</a>
+                                                                    <a class="dropdown-item" href="#">Cancelar</a>
+                                                                </div>
+                                                                </div>
+                                                            
+            
+                                                                <!-- <div style="  display: flex;flex-direction: column;align-items: center;">
                                                                     <div style="width: 80%;">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                     </div>  
@@ -1128,7 +1179,7 @@
                                                                         <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
                                                                     </div>
                                                                     <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
-                                                                </div>
+                                                                </div> -->
                                                                  
                                                             </td>
                                                         </tr>
@@ -2131,7 +2182,10 @@ export default {
         fechaatencion:null,
         url:'',
         user:'',
-        password:''
+        password:'',
+        usuario2:null,
+        contrasenaa1:null,
+        contrasenaa2:null,
 
     }   
     },
@@ -2395,7 +2449,9 @@ export default {
         registrar(){
 
         if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apellidos=='' || this.dni==null || this.dni=='' || this.sexo==null || this.sexo=='' || this.direccion==null || this.direccion==''
-        || this.email==null || this.email=='' || this.telefono==null || this.telefono=='' || this.telefonoemer==null || this.telefonoemer=='' || this.fechanac==null || this.fechanac=='' || this.observaciones==null || this.observaciones=='' ){
+        || this.email==null || this.email=='' || this.telefono==null || this.telefono=='' || this.telefonoemer==null || this.telefonoemer=='' || this.fechanac==null || this.fechanac=='' || this.observaciones==null || this.observaciones==''
+        || this.usuario2==null || this.usuario2=='' || this.contrasenaa1==null || this.contrasenaa1=='' || this.contrasenaa2==null || this.contrasenaa2==''
+        ){
           
             if(this.nombres==null){
                 this.nombres=''
@@ -2427,6 +2483,16 @@ export default {
             if(this.observaciones==null){
                 this.observaciones=''
             }
+            if(this.usuario2==null){
+                this.usuario2=''
+            }
+            if(this.contrasenaa1==null){
+                this.contrasenaa1=''
+            }
+            if(this.contrasenaa2==null){
+                this.contrasenaa2=''
+            }
+            
             
 
         }else{
@@ -2486,6 +2552,58 @@ export default {
                 })   
         }   
 
+        },
+        siguiente(){
+    
+
+        if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apellidos=='' || this.dni==null || this.dni=='' || this.sexo==null || this.sexo=='' || this.direccion==null || this.direccion==''
+        || this.email==null || this.email=='' || this.telefono==null || this.telefono=='' || this.telefonoemer==null || this.telefonoemer=='' || this.fechanac==null || this.fechanac=='' || this.observaciones==null || this.observaciones==''
+    
+        ){
+            if(this.nombres==null){
+        this.nombres=''
+        }
+        if(this.apellidos==null){
+            this.apellidos=''
+        }
+        if(this.dni==null){
+            this.dni=''
+        }
+        if(this.sexo==null){
+            this.sexo='null'
+        }
+        if(this.direccion==null){
+            this.direccion=''
+        }
+        if(this.email==null){
+            this.email=''
+        }
+        if(this.telefono==null){
+            this.telefono=''
+        }
+        if(this.telefonoemer==null){
+            this.telefonoemer=''
+        }
+        if(this.fechanac==null){
+            this.fechanac=''
+        }
+        if(this.observaciones==null){
+            this.observaciones=''
+        }
+
+            $("#siguientee").addClass("active") 
+        }else{
+            $("#usuarioo").addClass("active")
+            $("#datoss").removeClass("active")
+            $("#siguientee").removeClass("active")
+        }
+
+
+        },
+        removerclase(){
+            $("#usuarioo").removeClass("active")
+            $("#datoss").addClass("active")
+            $("#anteriorr").removeClass("active")
         },
         registrar2(){
 
