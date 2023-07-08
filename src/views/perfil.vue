@@ -98,12 +98,12 @@
                                 Citas
                             </p>
                         </a>
-                        <!-- <a v-if="user=='juan@hotmail.com' || user=='manuel@hotmail.com'"  class="nav-link " id="v-pills-medicos-tab" data-toggle="pill" href="#v-pills-atenciones" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
+                        <a   class="nav-link "  data-toggle="pill" href="#v-pills-atenciones" role="tab" aria-controls="v-pills-medicos" aria-selected="false">
                             <i class="nav-icon fas fa-file-alt"></i>
                             <p>
-                                Mis Atenciones
+                                Historial de Atenciones
                             </p>
-                        </a> -->
+                        </a>
                         <a v-if="user=='juan@hotmail.com'" class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                             <i class="nav-icon fas fa-user-alt"></i>
                             <p>
@@ -1102,7 +1102,7 @@
            </div>
                 
                 
-                <div class="tab-pane fade" id="v-pills-citas" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="tab-pane fade" id="v-pills-citas" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <div id="listaPacientes" class="nav-bar-transition">
                         <section class="content-header">
                             <div class="container-fluid">
@@ -1150,19 +1150,16 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div >
-                                                                        <button type="button"  class="btn btn-primary btn-sm">Registrar Atencion</button> 
-                                                                </div> 
                                                                 <div style="margin-top: 5px;" class="dropdown">
                                                                 <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                                     Acciones Citas
                                                                 </button>
-                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                                     <a class="dropdown-item" href="#">Detalles</a>
                                                                     <a class="dropdown-item" href="#">Editar</a>
-                                                                    <a class="dropdown-item" href="#">Atendido</a>
-                                                                    <a class="dropdown-item" href="#">Activar</a>
-                                                                    <a class="dropdown-item" href="#">Cancelar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
                                                                 </div>
                                                             
@@ -1194,19 +1191,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
 
                                                             </td>
                                                         </tr>
@@ -1221,20 +1218,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
-
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1248,20 +1244,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
-
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1275,19 +1270,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
 
                                                             </td>
                                                         </tr>
@@ -1303,19 +1298,19 @@
                                                             </td>
                                                       
                                                             <td>    
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
 
                                                             </td>
                                                         </tr>
@@ -1330,19 +1325,19 @@
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1356,19 +1351,19 @@
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1382,19 +1377,19 @@
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
 
                                                             </td>
                                                         </tr>
@@ -1409,19 +1404,19 @@
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
 
                                                             </td>
                                                         </tr>
@@ -1436,19 +1431,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
 
                                                             </td>
                                                         </tr>
@@ -1463,19 +1458,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1489,19 +1484,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1515,20 +1510,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
-
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1542,19 +1536,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1568,19 +1562,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1594,19 +1588,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
 
                                                             </td>
                                                         </tr>
@@ -1621,20 +1615,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
-
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1648,20 +1641,19 @@
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
-
+                                                                </div>
+                                                            
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1675,19 +1667,447 @@
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
                                                             <td>
-                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
-                                                                    <div style="width: 80%;">
-                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
-                                                                    </div>  
-                                                                    <button style="width: 80%;margin-top: 5px;" type="button" class="btn btn-success btn-sm">Editar</button>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-info btn-sm">Atendido</button> 
-                                                                    </div>
-                                                                    <div style="margin-top: 5px;width: 80%;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
-                                                                        <button style="width: 100%;" type="button" @click="activar()" class="btn btn-primary btn-sm">Activar</button> 
-                                                                    </div>
-                                                                    <button style="margin-top: 5px;width: 80%;" type="button" @click="eliminar()" class="btn btn-danger btn-sm">Cancelar</button>
+                                                                <div style="margin-top: 5px;" class="dropdown">
+                                                                <button style="font-size: .875rem;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    Acciones Citas
+                                                                </button>
+                                                                <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                    <a class="dropdown-item" href="#">Detalles</a>
+                                                                    <a class="dropdown-item" href="#">Editar</a>
+                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
+                                                                </div>
+                                                            
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-atenciones" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div id="listaPacientes" class="nav-bar-transition">
+                        <section class="content-header">
+                            <div class="container-fluid">
+                                <div class="row mb-2">
+                                    <div class="col-sm-12">
+                                        <h1>LISTA DE ATENCIONES</h1>
+                                    </div>
+                                    <!-- <div style="margin-top: -37px;" class="col-sm-12">
+                                        <ol id="paciente" @click="quitarAtributo5()" class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
+                                            <button id="botonagregar5" type="button" data-bs-toggle="pill" data-bs-target="#agregarcita" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Agregar Cita</button>
+                                        </ol>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="content">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <table id="example7" class="table table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nro</th>
+                                                            <th>Nombres</th>
+                                                            <th>Apellidos</th>
+                                                            <th>Documento</th>
+                                                            <th>Direccion</th>
+                                                            <th>Email</th>
+                                                            <th>Fecha y Hora</th>
+                                                            <th>Acciones</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>Pedro </td>
+                                                            <td>Mamani Ramirez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>Pedro </td>
+                                                            <td>Mamani Ramirez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>Pedro </td>
+                                                            <td>Mamani Ramirez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>Pedro </td>
+                                                            <td>Mamani Ramirez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>Pedro </td>
+                                                            <td>Mamani Ramirez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>16</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>18</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                </div> 
+                                                                </div>  
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>20</td>
+                                                            <td>Lucho Manuel</td>
+                                                            <td>Quispe Fernandez</td>
+                                                            <td>123456</td>
+                                                            <td>Av Lima</td>
+                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2022-11-11</td>
+                                                            <td>                                                                
+                                                                <div style="  display: flex;flex-direction: column;align-items: center;">
+                                                                <div style="width: 80%;">
+                                                                        <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button>
+                                                                        <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
+                                                                            <button style="width: 100%;" type="button"  class="btn btn-success btn-sm">Registrar Atencion</button> 
+                                                                        </div> 
+                                                                </div> 
+                                                                </div>  
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -2137,6 +2557,41 @@
                         </section>
                     </div>
                     </div>
+                    <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document" style="text-align: left;">
+                        <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title w-100 font-weight-bold">Registrar Atencion</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body mx-3">
+                            <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button class="btn btn-unique">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">LISTA DE MEDICINAS</div>
             </div>
 
@@ -2195,8 +2650,13 @@ export default {
         if(this.user==null && this.password==null){
 		this.$router.push("/");
         }
-        console.log(localStorage.getItem("user"))
-        $('#example2').DataTable({
+        this.tablas()
+       
+    },
+    
+    methods:{
+        tablas(){
+            $('#example2').DataTable({
             "language": {
             "sProcessing": "Procesando...",
             "sLengthMenu": "Mostrar _MENU_ registros",
@@ -2300,6 +2760,32 @@ export default {
             }
         }
         });
+        $('#example7').DataTable({
+            "language": {
+            "sProcessing": "Procesando...",
+            "sLengthMenu": "Mostrar _MENU_ registros",
+            "sZeroRecords": "No se encontraron resultados",
+            "sEmptyTable": "Ningún dato disponible en esta tabla",
+            "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "sInfoPostFix": "",
+            "sSearch": "Buscar:",
+            "sUrl": "",
+            "sInfoThousands": ",",
+            "sLoadingRecords": "Cargando...",
+            "oPaginate": {
+                "sFirst": "Primero",
+                "sLast": "Último",
+                "sNext": "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+            }
+        }
+        });
         $('#example6').DataTable({
             "language": {
             "sProcessing": "Procesando...",
@@ -2326,9 +2812,7 @@ export default {
             }
         }
         });
-    },
-    
-    methods:{
+        },
         cerrarSesion(){
         localStorage.clear()
         this.$router.push("/");
