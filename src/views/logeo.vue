@@ -94,9 +94,21 @@ export default {
             }
 
             if (this.error == false && this.error2 == false) {
+                if(this.usuario == "juan@hotmail.com"){
                 localStorage.setItem("user", this.usuario)
                 localStorage.setItem("password", this.contrasena)
-                this.$router.push("perfil");
+                this.$router.push("perfiladmin");
+                }else if(this.usuario == "jhon@hotmail.com"){
+                localStorage.setItem("user", this.usuario)
+                localStorage.setItem("password", this.contrasena)
+                this.$router.push("perfilmedico");
+                }else{
+                localStorage.setItem("user", this.usuario)
+                localStorage.setItem("password", this.contrasena)
+                this.$router.push("perfilpaciente");
+
+                }
+             
             }
         }
     }
