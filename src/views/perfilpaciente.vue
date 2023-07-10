@@ -219,14 +219,6 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
-                                                <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Edad" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
-
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
                                                 <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
@@ -246,6 +238,27 @@
                                             
                                                 </div>
                                             </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
+                                                <div class="col-sm-10">
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="dni">
+                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <option value=null selected>Seleccione una opcion</option >
+                                                    <option value="value2" >Administrador</option>
+                                                    <option value="value3">Medico</option>
+                                                    <option value="value3">Paciente</option>
+                                                    </select>    
+                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                </div>
+                                            </div>
+                              
                                             <!-- <div class="form-group row">
                                                 <label for="inputExperience" class="col-sm-2 col-form-label">Direccion</label>
                                                 <div class="col-sm-10">
@@ -1123,7 +1136,7 @@
                                             <button id="botonagregar5" type="button" data-bs-toggle="pill" data-bs-target="#agregarcita" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Agregar Cita</button>
                                         </ol> -->
                                    
-                                        <button style="left: 655px;position: relative;" @click="abrirModal2" type="button" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Descargar Citas</button>
+                                        <button style="left: 645px;position: relative;" @click="abrirModal2" type="button" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Descargar Citas</button>
 
                                         <ol  class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
                                         <button @click="abrirModal" type="button" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Agregar Cita</button>
@@ -2669,7 +2682,7 @@
                     <p>Servicio seleccionado: {{ servicio }}</p>
                     <p>Médico seleccionado: {{ medico }}</p>
                     </b-modal>
-                    <b-modal centered v-model="mostrarModal2" title="Historial de Citas" hide-footer>
+                    <b-modal  v-model="mostrarModal2" title="Historial de Citas" hide-footer>
                     <div class="modal-body">
                         <b-form-group label="DNI">
                         <b-form-input v-model="dni2" :disabled="historial.length > 0" @input="validarDNI" maxlength="8"></b-form-input>

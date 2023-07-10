@@ -209,20 +209,11 @@
                                                 </div>
                                               
                                             </div>
-
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                                 <div class="col-sm-10">
                                                 <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
                                                 <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
-
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
-                                                <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Edad" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
@@ -244,6 +235,26 @@
                                                     </select>    
                                                     <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                             
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
+                                                <div class="col-sm-10">
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="edad">
+                                                <p v-if="edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <option value=null selected>Seleccione una opcion</option >
+                                                    <option value="value2" >Administrador</option>
+                                                    <option value="value3">Medico</option>
+                                                    <option value="value3">Paciente</option>
+                                                    </select>    
+                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                                             <!-- <div class="form-group row">
@@ -803,7 +814,7 @@
                                         <div class="card-header p-2">
                                                 <ul class="nav nav-pills">
                                                 <li class="nav-item"><a id="datoss" class="nav-link active" href="#personales" data-toggle="tab">Datos Personales</a></li>
-                                                <li  class="nav-item"><a id="usuarioo" class="nav-link" href="#usuario" data-toggle="tab">Datos de Usuario</a></li>
+                                                <li  class="nav-item"><a id="usuarioo" style="background:none;color:#6c757d" class="nav-link active" href="#usuario" data-toggle="tab">Datos de Usuario</a></li>
                                                 </ul>
                                             </div>
                                 
@@ -829,15 +840,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
-                                                <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
-
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Sexo</label>
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Genero</label>
                                                 <div class="col-sm-10">
                                                     <select class="form-control" name="select" v-model="sexo">
                                                     <option value=null selected>Seleccione una opcion</option >
@@ -849,6 +852,14 @@
                                                 </div>
                                             </div>
                                             <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
+                                                <div class="col-sm-10">
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="edad">
+                                                <p v-if="edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+                                                </div>
+                                            </div>
+                                            <!-- <div class="form-group row">
                                                 <label for="inputExperience" class="col-sm-2 col-form-label">Direccion</label>
                                                 <div class="col-sm-10">
                                                 <input class="form-control"  placeholder="Direccion" v-model="direccion">
@@ -868,7 +879,7 @@
                                                 <input type="number" class="form-control"  placeholder="Telefono" v-model="telefono">
                                                 <p v-if="telefono==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <!-- <div class="form-group row">
                                                 <label for="inputSkills" class="col-sm-2 col-form-label">Telefono (Emergencia)</label>
                                                 <div class="col-sm-10">
@@ -876,7 +887,7 @@
                                                 <p v-if="telefonoemer==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div> -->
-                                            <div class="form-group row">
+                                            <!-- <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
                                                 <div class="col-sm-10">
                                                 <input type="date" class="form-control"  placeholder="Fecha de Nacimiento" v-model="fechanac">
@@ -891,7 +902,7 @@
                                                 <p v-if="observaciones==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
-                                            </div>
+                                            </div> -->
                              
                                             <div class="form-group row">
                                                 <div class="offset-sm-2 col-sm-10" style="text-align: left;">
@@ -902,11 +913,12 @@
                                         </div>
                                         <div class="tab-pane" id="usuario" v-on:submit.prevent="registrar">
                                             <form class="form-horizontal">
-                                            <div class="form-group row">
-                                                <label for="inputName" class="col-sm-2 col-form-label">Correo Electronico</label>
+                                                <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
-                                                <input type="email" class="form-control"  placeholder="Correo Electronico" v-model="usuario2">
-                                                <p v-if="usuario2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
+                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -920,9 +932,21 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Confirmar Contraseña</label>
                                                 <div class="col-sm-10">
-                                                <input type="password" class="form-control"  placeholder="Conformar Contraseña" v-model="contrasenaa2">
+                                                <input type="password" class="form-control"  placeholder="Confirmar Contraseña" v-model="contrasenaa2">
                                                 <p v-if="contrasenaa2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control" name="select" v-model="rol">
+                                                    <option value=null selected>Seleccione una opcion</option >
+                                                    <option value="value2" >Administrador</option>
+                                                    <option value="value3">Medico</option>
+                                                    <option value="value3">Paciente</option>
+                                                    </select>    
+                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -1123,7 +1147,7 @@
                                             <button id="botonagregar5" type="button" data-bs-toggle="pill" data-bs-target="#agregarcita" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Agregar Cita</button>
                                         </ol> -->
                                    
-                                        <button style="left: 655px;position: relative;" @click="abrirModal2" type="button" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Descargar Citas</button>
+                                        <button style="left: 645px;position: relative;" @click="abrirModal2" type="button" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Descargar Citas</button>
 
                                         <ol  class="breadcrumb float-sm-right nav flex-column nav-pills me-3">
                                         <button @click="abrirModal" type="button" class="btn btn-primary"><i style="margin-right: 6px;" class='fas fa-file-alt'></i>Agregar Cita</button>
@@ -2669,7 +2693,7 @@
                     <p>Servicio seleccionado: {{ servicio }}</p>
                     <p>Médico seleccionado: {{ medico }}</p>
                     </b-modal>
-                    <b-modal centered v-model="mostrarModal2" title="Historial de Citas" hide-footer>
+                    <b-modal  v-model="mostrarModal2" title="Historial de Citas" hide-footer>
                     <div class="modal-body">
                         <b-form-group label="DNI">
                         <b-form-input v-model="dni2" :disabled="historial.length > 0" @input="validarDNI" maxlength="8"></b-form-input>
@@ -2730,6 +2754,8 @@ export default {
         usuario2:null,
         contrasenaa1:null,
         contrasenaa2:null,
+        edad:null,
+        rol:null,
         mostrarModal: false,
         mostrarPopup: false,
         sede: '',
@@ -3202,46 +3228,35 @@ export default {
         siguiente(){
     
 
-        if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apellidos=='' || this.dni==null || this.dni=='' || this.sexo==null || this.sexo=='' || this.direccion==null || this.direccion==''
-        || this.email==null || this.email=='' || this.telefono==null || this.telefono=='' || this.telefonoemer==null || this.telefonoemer=='' || this.fechanac==null || this.fechanac=='' || this.observaciones==null || this.observaciones==''
-    
-        ){
-            if(this.nombres==null){
+        if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apellidos==''  || this.sexo==null || this.sexo=='' || this.edad==null || this.edad=='' ){
+        if(this.nombres==null){
         this.nombres=''
         }
         if(this.apellidos==null){
             this.apellidos=''
         }
-        if(this.dni==null){
-            this.dni=''
-        }
         if(this.sexo==null){
             this.sexo='null'
         }
-        if(this.direccion==null){
-            this.direccion=''
+        if(this.edad==null){
+            this.edad=''
         }
-        if(this.email==null){
-            this.email=''
-        }
-        if(this.telefono==null){
-            this.telefono=''
-        }
-        if(this.telefonoemer==null){
-            this.telefonoemer=''
-        }
-        if(this.fechanac==null){
-            this.fechanac=''
-        }
-        if(this.observaciones==null){
-            this.observaciones=''
-        }
+       
+ 
 
-            $("#siguientee").addClass("active") 
+        $("#siguientee").addClass("active") 
+        $("#usuarioo").addClass("active") 
+   
         }else{
             $("#usuarioo").addClass("active")
             $("#datoss").removeClass("active")
             $("#siguientee").removeClass("active")
+            var elemento = document.getElementById("usuarioo");
+            elemento.style.setProperty("color", "#fff", "important");
+            elemento.style.setProperty("background", "#007bff", "important");
+            // elemento.style.background='007bff;'
+            // elemento.style.color='#fff'
+
         }
 
 
@@ -3250,6 +3265,9 @@ export default {
             $("#usuarioo").removeClass("active")
             $("#datoss").addClass("active")
             $("#anteriorr").removeClass("active")
+            var elemento = document.getElementById("usuarioo");
+            elemento.style.setProperty("color", "#6c757d", "important");
+            elemento.style.setProperty("background", "none", "important");
         },
         registrar2(){
 
