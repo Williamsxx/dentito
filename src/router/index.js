@@ -5,6 +5,7 @@ import Logeo from '../views/logeo.vue'
 import Cita from '../views/cita.vue'
 import Main from '../views/main.vue'
 import Perfil from '../views/perfil.vue'
+import Reporte from '../views/reporte.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -32,6 +33,12 @@ const routes = [
     path: '/perfil',
     name: 'perfilDentito',
     component: Perfil
+  },
+
+  {
+    path: '/reporte',
+    name: 'reporte',
+    component: Reporte
   },
 
 ]

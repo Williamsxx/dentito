@@ -80,7 +80,7 @@ export default {
     },
     methods: {
         login() {
-            if ((this.usuario != "juan@hotmail.com" && this.contrasena != 1234569) && (this.usuario != "jhon@hotmail.com" && this.contrasena != 123) &&  (this.usuario != "manuel@hotmail.com" && this.contrasena != 'asd')) {
+            if ((this.usuario != "juan@hotmail.com" && this.contrasena != 123456) && (this.usuario != "jhon@hotmail.com" && this.contrasena != 123) &&  (this.usuario != "manuel@hotmail.com" && this.contrasena != 'asd')) {
                 this.error = true
             } else if ((this.usuario == "juan@hotmail.com" && this.contrasena != 123456) || (this.usuario == "jhon@hotmail.com" && this.contrasena != 123) || (this.usuario == "manuel@hotmail.com" && this.contrasena != 'asd')) {
 				this.error = false
