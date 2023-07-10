@@ -162,7 +162,7 @@
                                     <div class="card-body box-profile">
                                         <div class="text-center">
                                         <img style="height: 280px;width: auto;margin-top: 12px;" class="profile-user-img img-fluid img-circle"
-                                            src="img/user2-160x160.jpg"
+                                            src="img/sin-foto.png"
                                             alt="User profile picture">
                                         </div>
                                         <div v-if="user=='juan@hotmail.com'">
