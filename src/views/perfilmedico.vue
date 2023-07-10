@@ -19,15 +19,15 @@
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
              
-                    <div style="margin-right: 25px;" class="dropdown">
+            <div style="margin-right: 25px;" class="dropdown">
 
-  <i class="nav-icon fas fa-user-alt "  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <router-link :to="{ name: 'main' }" style="text-decoration: none;font-weight: normal;">
-    <li><a class="dropdown-item" href="#" @click="cerrarSesion()" >Cerrar sesion</a></li>
-    </router-link>
-  </ul>
-</div>
+            <i class="nav-icon fas fa-user-alt "  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <router-link :to="{ name: 'main' }" style="text-decoration: none;font-weight: normal;">
+                <li><a class="dropdown-item" href="#" @click="cerrarSesion()" >Cerrar sesion</a></li>
+                </router-link>
+            </ul>
+            </div>
              
             </ul>
         </nav>
@@ -204,7 +204,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputName" placeholder="Nombres" v-model="nombres">
+                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="nombres">
                                                 <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                               
@@ -213,7 +213,7 @@
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail" placeholder="Apellidos" v-model="apellidos">
+                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
                                                 <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
@@ -221,7 +221,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputName2" placeholder="Edad" v-model="dni">
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="dni">
                                                 <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
@@ -229,7 +229,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputName2" placeholder="DNI" v-model="dni">
+                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
                                                 <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
@@ -814,7 +814,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputName" placeholder="Nombres" v-model="nombres">
+                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="nombres">
                                                 <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                               
@@ -823,7 +823,7 @@
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputEmail" placeholder="Apellidos" v-model="apellidos">
+                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
                                                 <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
@@ -831,7 +831,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputName2" placeholder="DNI" v-model="dni">
+                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
                                                 <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
@@ -851,7 +851,7 @@
                                             <div class="form-group row">
                                                 <label for="inputExperience" class="col-sm-2 col-form-label">Direccion</label>
                                                 <div class="col-sm-10">
-                                                <input class="form-control" id="inputExperience" placeholder="Direccion" v-model="direccion">
+                                                <input class="form-control"  placeholder="Direccion" v-model="direccion">
                                                 <p v-if="direccion==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
@@ -879,7 +879,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
                                                 <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="inputName2" placeholder="Fecha de Nacimiento" v-model="fechanac">
+                                                <input type="date" class="form-control"  placeholder="Fecha de Nacimiento" v-model="fechanac">
                                                 <p v-if="fechanac==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
@@ -905,14 +905,14 @@
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Correo Electronico</label>
                                                 <div class="col-sm-10">
-                                                <input type="email" class="form-control" id="inputName" placeholder="Correo Electronico" v-model="usuario2">
+                                                <input type="email" class="form-control"  placeholder="Correo Electronico" v-model="usuario2">
                                                 <p v-if="usuario2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Contraseña</label>
                                                 <div class="col-sm-10">
-                                                <input type="password" class="form-control" id="inputEmail" placeholder="Contraseña" v-model="contrasenaa1">
+                                                <input type="password" class="form-control" placeholder="Contraseña" v-model="contrasenaa1">
                                                 <p v-if="contrasenaa1==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
@@ -920,7 +920,7 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Confirmar Contraseña</label>
                                                 <div class="col-sm-10">
-                                                <input type="password" class="form-control" id="inputName2" placeholder="Conformar Contraseña" v-model="contrasenaa2">
+                                                <input type="password" class="form-control"  placeholder="Conformar Contraseña" v-model="contrasenaa2">
                                                 <p v-if="contrasenaa2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
@@ -1012,7 +1012,7 @@
                                        <div class="form-group row">
                                            <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                            <div class="col-sm-10">
-                                           <input type="text" class="form-control" id="inputName" placeholder="Nombres" v-model="nombres">
+                                           <input type="text" class="form-control"  placeholder="Nombres" v-model="nombres">
                                            <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                            </div>
                                          
@@ -1021,7 +1021,7 @@
                                        <div class="form-group row">
                                            <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                            <div class="col-sm-10">
-                                           <input type="text" class="form-control" id="inputEmail" placeholder="Apellidos" v-model="apellidos">
+                                           <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
                                            <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                            </div>
@@ -1029,7 +1029,7 @@
                                        <div class="form-group row">
                                            <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                            <div class="col-sm-10">
-                                           <input type="text" class="form-control" id="inputName2" placeholder="DNI" v-model="dni">
+                                           <input type="text" class="form-control" placeholder="DNI" v-model="dni">
                                            <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                            </div>
@@ -1049,42 +1049,42 @@
                                        <div class="form-group row">
                                            <label for="inputExperience" class="col-sm-2 col-form-label">Direccion</label>
                                            <div class="col-sm-10">
-                                           <input class="form-control" id="inputExperience" placeholder="Direccion" v-model="direccion">
+                                           <input class="form-control"  placeholder="Direccion" v-model="direccion">
                                            <p v-if="direccion==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                            </div>
                                        </div>
                                        <div class="form-group row">
                                            <label for="inputSkills" class="col-sm-2 col-form-label">Email</label>
                                            <div class="col-sm-10">
-                                           <input type="email" class="form-control" id="inputSkills" placeholder="Email" v-model="email">
+                                           <input type="email" class="form-control"  placeholder="Email" v-model="email">
                                            <p v-if="email==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                            </div>
                                        </div>
                                        <div class="form-group row">
                                            <label for="inputSkills" class="col-sm-2 col-form-label">Telefono</label>
                                            <div class="col-sm-10">
-                                           <input type="number" class="form-control" id="inputSkills" placeholder="Telefono" v-model="telefono">
+                                           <input type="number" class="form-control" placeholder="Telefono" v-model="telefono">
                                            <p v-if="telefono==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                            </div>
                                        </div>
                                        <!-- <div class="form-group row">
                                            <label for="inputSkills" class="col-sm-2 col-form-label">Telefono (Emergencia)</label>
                                            <div class="col-sm-10">
-                                           <input type="number" class="form-control" id="inputSkills" placeholder="Telefono Emergencia" v-model="telefonoemer">
+                                           <input type="number" class="form-control"  placeholder="Telefono Emergencia" v-model="telefonoemer">
                                            <p v-if="telefonoemer==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                            </div>
                                        </div> -->
                                        <div class="form-group row">
                                            <label for="inputName2" class="col-sm-2 col-form-label">Fecha de Nacimiento</label>
                                            <div class="col-sm-10">
-                                           <input type="date" class="form-control" id="inputName2" placeholder="Fecha de Nacimiento" v-model="fechanac">
+                                           <input type="date" class="form-control"  placeholder="Fecha de Nacimiento" v-model="fechanac">
                                            <p v-if="fechanac==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                            </div>
                                        </div>
                                        <div class="form-group row">
                                            <label for="inputSkills" class="col-sm-2 col-form-label">Observaciones</label>
                                            <div class="col-sm-10">
-                                           <textarea type="number" class="form-control" id="inputSkills" placeholder="Observaciones" v-model="observaciones">
+                                           <textarea type="number" class="form-control"  placeholder="Observaciones" v-model="observaciones">
                                            </textarea>
                                            <p v-if="observaciones==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
@@ -2585,15 +2585,15 @@
                             <form>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nombres</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Nombres">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Apellidos</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Apellidos">
+                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Apellidos">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">DNI</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="DNI">
+                                <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="DNI">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Sexo</label>
@@ -2605,28 +2605,28 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Direccion</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Direccion">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Direccion">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Telefono</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefono">
+                                <input type="number" class="form-control"  aria-describedby="emailHelp" placeholder="Telefono">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Fecha de Nacimiento</label>
-                                <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Fecha de Nacimiento">
+                                <input type="date" class="form-control"  placeholder="Fecha de Nacimiento">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Fecha y Hora de Atencion</label>
-                                <input type="datetime-local" class="form-control" id="exampleInputPassword1" placeholder="Fecha y Hora de Atencion">
+                                <input type="datetime-local" class="form-control"  placeholder="Fecha y Hora de Atencion">
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Atencion Realizada</label>
                            
-                                <textarea rows="10" type="text" class="form-control" id="exampleInputPassword1" placeholder="Atencion Realizada"></textarea>
+                                <textarea rows="10" type="text" class="form-control"  placeholder="Atencion Realizada"></textarea>
                             </div>
                                              
                             </form>
@@ -2761,6 +2761,9 @@ export default {
         this.user=localStorage.getItem("user")
         this.password=localStorage.getItem("password")
         if(this.user==null && this.password==null){
+		this.$router.push("/");
+        }
+        if(localStorage.getItem("user") != 'jhon@hotmail.com'){
 		this.$router.push("/");
         }
         this.tablas()
