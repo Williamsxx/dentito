@@ -248,13 +248,13 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <select class="form-control" name="select" v-model="rol">
                                                     <option value=null selected>Seleccione una opcion</option >
                                                     <option value="value2" >Administrador</option>
                                                     <option value="value3">Medico</option>
                                                     <option value="value3">Paciente</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="rol=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                                             <!-- <div class="form-group row">
@@ -813,8 +813,8 @@
                                
                                         <div class="card-header p-2">
                                                 <ul class="nav nav-pills">
-                                                <li class="nav-item"><a id="datoss" class="nav-link active" href="#personales" data-toggle="tab">Datos Personales</a></li>
-                                                <li  class="nav-item"><a id="usuarioo" style="background:none;color:#6c757d" class="nav-link active" href="#usuario" data-toggle="tab">Datos de Usuario</a></li>
+                                                <li class="nav-item"><a id="datoss"  class="nav-link active" @click="datospersonales()" href="#personales" data-toggle="tab">Datos Personales</a></li>
+                                                <li  class="nav-item"><a id="usuarioo" @click="datosusuario()"  class="nav-link" href="#usuario" data-toggle="tab">Datos de Usuario</a></li>
                                                 </ul>
                                             </div>
                                 
@@ -825,8 +825,8 @@
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="nombres">
-                                                <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="usuario.nombres">
+                                                <p v-if="usuario.nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                               
                                             </div>
@@ -834,28 +834,28 @@
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
-                                                <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="usuario.apellidos">
+                                                <p v-if="usuario.apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Genero</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <select class="form-control" name="select" v-model="usuario.sexo">
                                                     <option value=null selected>Seleccione una opcion</option >
                                                     <option value="value2" >Masculino</option>
                                                     <option value="value3">Femenino</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="usuario.sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                             
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Edad" v-model="edad">
-                                                <p v-if="edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="usuario.edad">
+                                                <p v-if="usuario.edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
@@ -914,39 +914,39 @@
                                         <div class="tab-pane" id="usuario" v-on:submit.prevent="registrar">
                                             <form class="form-horizontal">
                                                 <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
+                                                <label  class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="DNI" v-model="usuario.dni">
+                                                <p v-if="usuario.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputEmail" class="col-sm-2 col-form-label">Contraseña</label>
+                                                <label  class="col-sm-2 col-form-label">Contraseña</label>
                                                 <div class="col-sm-10">
-                                                <input type="password" class="form-control"  placeholder="Contraseña" v-model="contrasenaa1">
-                                                <p v-if="contrasenaa1==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="password" class="form-control"  placeholder="Contraseña" v-model="usuario.contrasenaa1">
+                                                <p v-if="usuario.contrasenaa1==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Confirmar Contraseña</label>
+                                                <label class="col-sm-2 col-form-label">Confirmar Contraseña</label>
                                                 <div class="col-sm-10">
-                                                <input type="password" class="form-control"  placeholder="Confirmar Contraseña" v-model="contrasenaa2">
-                                                <p v-if="contrasenaa2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="password" class="form-control"  placeholder="Confirmar Contraseña" v-model="usuario.contrasenaa2">
+                                                <p v-if="usuario.contrasenaa2==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
+                                                <label  class="col-sm-2 col-form-label">Rol</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="rol">
+                                                    <select class="form-control" name="select" v-model="usuario.rol">
                                                     <option value=null selected>Seleccione una opcion</option >
                                                     <option value="value2" >Administrador</option>
                                                     <option value="value3">Medico</option>
                                                     <option value="value3">Paciente</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="usuario.rol=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                                             <div class="form-group row">
@@ -2746,14 +2746,13 @@ export default {
         telefonoemer:null,
         fechanac:null,
         observaciones:null,
+        rol:null,
         listaPaciente:[],
         fechaatencion:null,
         url:'',
         user:'',
         password:'',
         usuario2:null,
-        contrasenaa1:null,
-        contrasenaa2:null,
         edad:null,
         rol:null,
         mostrarModal: false,
@@ -2779,7 +2778,17 @@ export default {
         ],
         mostrarModal2: false,
         dni2: '',
-        historial: ''
+        historial: '',
+        usuario:{
+        nombres:null,
+        apellidos:null,
+        sexo:null,
+        edad:null,
+        dni:null,
+        contrasenaa1:null,
+        contrasenaa2:null,
+        rol:null
+        }
 
     }   
     },
@@ -3118,57 +3127,75 @@ export default {
                 }
                 })  
         },
+        datospersonales(){
+    
+            var elemento = document.getElementById("usuarioo");
+            elemento.style.background = "none";
+            elemento.style.color = "#6c757d";
+            // elemento.style.color = "#6c757d";
+            // elemento.style.setProperty("color", "#6c757d", "important");
+            // elemento.style.setProperty("background", "none", "important");   
+        
+           
+        },
+        datosusuario(){
+            if( this.usuario.nombres!='' && this.usuario.nombres!='' && this.usuario.apellidos!=null && this.usuario.apellidos!=''  && this.usuario.sexo!=null && this.usuario.sexo!='' && this.usuario.edad!=null && this.usuario.edad!='' ){
+
+            var elemento = document.getElementById("usuarioo");
+            elemento.style.background = "#007bff";
+            elemento.style.color = "#fff";
+            // elemento.style.setProperty("color", "#fff", "important");
+            // elemento.style.setProperty("background", "#007bff", "important");
+            $("#usuarioo").removeClass("active")
+            // var boton = document.getElementById("usuarioo");
+            // boton.disabled = false;
+            }else{
+            $("#usuarioo").addClass("active") 
+            var elemento = document.getElementById("usuarioo");
+            elemento.style.background = "none";
+            elemento.style.color = "#6c757d";
+     
+            // elemento.style.setProperty("color", "#6c757d", "important");
+            // elemento.style.setProperty("background", "none", "important");
+            // var boton = document.getElementById("usuarioo");
+            // boton.disabled = true;
+            }
+        },
+
         registrar(){
 
-        if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apellidos=='' || this.dni==null || this.dni=='' || this.sexo==null || this.sexo=='' || this.direccion==null || this.direccion==''
-        || this.email==null || this.email=='' || this.telefono==null || this.telefono=='' || this.telefonoemer==null || this.telefonoemer=='' || this.fechanac==null || this.fechanac=='' || this.observaciones==null || this.observaciones==''
-        || this.usuario2==null || this.usuario2=='' || this.contrasenaa1==null || this.contrasenaa1=='' || this.contrasenaa2==null || this.contrasenaa2==''
+        if( this.usuario.nombres==null || this.usuario.nombres=='' || this.usuario.apellidos==null || this.usuario.apellidos=='' || this.usuario.dni==null || this.usuario.dni=='' || this.usuario.sexo==null || this.usuario.sexo=='' || this.usuario.edad==null || this.usuario.edad==''
+        || this.usuario.rol==null || this.usuario.rol=='' ||  this.usuario.contrasenaa1==null || this.usuario.contrasenaa1=='' || this.usuario.contrasenaa2==null || this.usuario.contrasenaa2==''
         ){
           
-            if(this.nombres==null){
-                this.nombres=''
+            if(this.usuario.nombres==null){
+                this.usuario.nombres=''
             }
-            if(this.apellidos==null){
-                this.apellidos=''
+            if(this.usuario.apellidos==null){
+                this.usuario.apellidos=''
             }
-            if(this.dni==null){
-                this.dni=''
+            if(this.usuario.dni==null){
+                this.usuario.dni=''
             }
-            if(this.sexo==null){
-                this.sexo='null'
+            if(this.usuario.sexo==null){
+                this.usuario.sexo='null'
             }
-            if(this.direccion==null){
-                this.direccion=''
+            if(this.usuario.edad==null){
+                this.usuario.edad=''
             }
-            if(this.email==null){
-                this.email=''
+            if(this.usuario.contrasenaa1==null){
+                this.usuario.contrasenaa1=''
             }
-            if(this.telefono==null){
-                this.telefono=''
+            if(this.usuario.contrasenaa2==null){
+                this.usuario.contrasenaa2=''
             }
-            if(this.telefonoemer==null){
-                this.telefonoemer=''
+            if(this.usuario.rol==null){
+                this.usuario.rol='null'
             }
-            if(this.fechanac==null){
-                this.fechanac=''
-            }
-            if(this.observaciones==null){
-                this.observaciones=''
-            }
-            if(this.usuario2==null){
-                this.usuario2=''
-            }
-            if(this.contrasenaa1==null){
-                this.contrasenaa1=''
-            }
-            if(this.contrasenaa2==null){
-                this.contrasenaa2=''
-            }
-            
-            
+            console.log("aaaaaaaaaa")
 
         }else{
-
+            console.log("bbbb")
                let formData = new FormData();
                 formData.append( 'nombres',this.nombres);
                 formData.append( 'apellidos',this.apellidos);
@@ -3228,34 +3255,36 @@ export default {
         siguiente(){
     
 
-        if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apellidos==''  || this.sexo==null || this.sexo=='' || this.edad==null || this.edad=='' ){
-        if(this.nombres==null){
-        this.nombres=''
+        if( this.usuario.nombres==null || this.usuario.nombres=='' || this.usuario.apellidos==null || this.usuario.apellidos==''  || this.usuario.sexo==null || this.usuario.sexo=='' || this.usuario.edad==null || this.usuario.edad=='' ){
+        if(this.usuario.nombres==null){
+        this.usuario.nombres=''
         }
-        if(this.apellidos==null){
-            this.apellidos=''
+        if(this.usuario.apellidos==null){
+            this.usuario.apellidos=''
         }
-        if(this.sexo==null){
-            this.sexo='null'
+        if(this.usuario.sexo==null){
+            this.usuario.sexo='null'
         }
-        if(this.edad==null){
-            this.edad=''
+        if(this.usuario.edad==null){
+            this.usuario.edad=''
         }
        
- 
+
 
         $("#siguientee").addClass("active") 
-        $("#usuarioo").addClass("active") 
+
    
         }else{
-            $("#usuarioo").addClass("active")
-            $("#datoss").removeClass("active")
-            $("#siguientee").removeClass("active")
-            var elemento = document.getElementById("usuarioo");
-            elemento.style.setProperty("color", "#fff", "important");
-            elemento.style.setProperty("background", "#007bff", "important");
-            // elemento.style.background='007bff;'
-            // elemento.style.color='#fff'
+        $("#siguientee").removeClass("active")
+       
+        $("#usuarioo").addClass("active")
+        $("#datoss").removeClass("active")
+            // $("#siguientee").removeClass("active")
+        var elemento = document.getElementById("usuarioo");
+        elemento.style.background = "#007bff";
+            elemento.style.color = "#fff";
+        // elemento.style.setProperty("color", "#fff", "important");
+        // elemento.style.setProperty("background", "#007bff", "important");
 
         }
 
@@ -3363,7 +3392,7 @@ if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apell
         })   
 }   
 
-}
+        }
     }
 }
 </script>
@@ -3415,4 +3444,8 @@ table.dataTable tbody td {
 .b-calendar .b-calendar-grid {
     padding: 15px;
 }
+/* #usuarioo:hover {
+    color: #0056b3 !important;
+
+} */
 </style>
