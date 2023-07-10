@@ -41,7 +41,15 @@
                                     <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" >Cuenta</a>
                                                                                                                                                                      
                                     <ul class="dropdown-menu primero" aria-labelledby="dropdownMenuLink">
-                                        <router-link :to="{ name: 'perfilDentito' }" style="text-decoration: none;font-weight: normal;" >
+                                        <router-link :to="{ name: 'perfilAdmin' }" style="text-decoration: none;font-weight: normal;" v-if="user=='juan@hotmail.com'" >
+
+                                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                        </router-link>
+                                        <router-link :to="{ name: 'perfilPaciente' }" style="text-decoration: none;font-weight: normal;" v-else-if="user=='manuel@hotmail.com'" >
+
+                                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                        </router-link>
+                                        <router-link :to="{ name: 'perfilMedico' }" style="text-decoration: none;font-weight: normal;" v-else >
 
                                         <li><a class="dropdown-item" href="#">Perfil</a></li>
                                         </router-link>

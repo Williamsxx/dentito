@@ -4,7 +4,9 @@ import Logeo from '../views/logeo.vue'
 // import Perfil from '../views/perfil.vue'
 import Cita from '../views/cita.vue'
 import Main from '../views/main.vue'
-import Perfil from '../views/perfil.vue'
+import PerfilAdmin from '../views/perfiladmin.vue'
+import PerfilMedico from '../views/perfilmedico.vue'
+import PerfilPaciente from '../views/perfilpaciente.vue'
 import Reporte from '../views/reporte.vue'
 Vue.use(VueRouter)
 
@@ -30,10 +32,21 @@ const routes = [
     component: Cita
   },
   {
-    path: '/perfil',
-    name: 'perfilDentito',
-    component: Perfil
+    path: '/perfiladmin',
+    name: 'perfilAdmin',
+    component: PerfilAdmin
   },
+  {
+    path: '/perfilpaciente',
+    name: 'perfilPaciente',
+    component: PerfilPaciente
+  },
+  {
+    path: '/perfilmedico',
+    name: 'perfilMedico',
+    component: PerfilMedico
+  },
+
 
   {
     path: '/reporte',
