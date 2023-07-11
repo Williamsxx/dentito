@@ -497,7 +497,7 @@ export default {
 .navbar-expand-lg .navbar-nav .dropdown-menu {
 
     top: 67px; 
-  left: 22px; 
+  left: 20px; 
   margin-top:0 !important
 
 }
