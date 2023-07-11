@@ -367,7 +367,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button id="usuarioboton" style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
@@ -386,7 +386,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
@@ -405,7 +405,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
@@ -424,7 +424,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
@@ -443,7 +443,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
@@ -462,7 +462,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
                                                             </td>
                                                       
                                                             <td>    
@@ -482,7 +482,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-danger btn-sm">Desactivado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="  display: flex;flex-direction: column;align-items: center;">
@@ -3286,7 +3286,7 @@ if( this.atencion.nombres==null || this.atencion.nombres=='' || this.atencion.ap
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Estas seguro de eliminar a este usuario?',
+                title: 'Estas seguro de desactivar a este usuario?',
                 text: "Recuerda revisar los datos por ultima vez!",
                 icon: 'warning',
                 showCancelButton: true,
@@ -3301,6 +3301,7 @@ if( this.atencion.nombres==null || this.atencion.nombres=='' || this.atencion.ap
                        
                     // })
                     // this.listaPacientes()
+                    $("#usuarioboton").text("Desactivado")
                     swalWithBootstrapButtons.fire(
                     'Aceptado!',
                     'Paciente eliminado Correctamente!',
@@ -3329,7 +3330,7 @@ if( this.atencion.nombres==null || this.atencion.nombres=='' || this.atencion.ap
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Estas seguro de modificar esta cita?',
+                title: 'Estas seguro de activar a este usuario?',
                 text: "Recuerda revisar los datos por ultima vez!",
                 icon: 'warning',
                 showCancelButton: true,
@@ -3344,7 +3345,7 @@ if( this.atencion.nombres==null || this.atencion.nombres=='' || this.atencion.ap
                        
                     // })
                     // this.listaPacientes()
-                    // console.log($("#botonestado").text("Atendido"))
+                    $("#usuarioboton").text("Activado")
                     
                     swalWithBootstrapButtons.fire(
                     'Aceptado!',
