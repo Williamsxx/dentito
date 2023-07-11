@@ -204,8 +204,8 @@
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control" placeholder="Nombres" v-model="nombres">
-                                                <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control" placeholder="Nombres" v-model="paciente2.nombres">
+                                                <p v-if="paciente2.nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                               
                                             </div>
@@ -213,49 +213,49 @@
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
-                                                <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="paciente2.apellidos">
+                                                <p v-if="paciente2.apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="DNI" v-model="paciente2.dni">
+                                                <p v-if="paciente2.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Genero</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <select class="form-control" name="select" v-model="paciente2.sexo">
                                                     <option value=null selected>Seleccione una opcion</option >
-                                                    <option value="value2" >Masculino</option>
-                                                    <option value="value3">Femenino</option>
+                                                    <option value="Masculino" >Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="paciente2.sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                             
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Edad" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="paciente2.edad">
+                                                <p v-if="paciente2.edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <select class="form-control" name="select" v-model="paciente2.rol">
                                                     <option value=null selected>Seleccione una opcion</option >
-                                                    <option value="value2" >Administrador</option>
-                                                    <option value="value3">Medico</option>
-                                                    <option value="value3">Paciente</option>
+                                                    <option value="Administrador" >Administrador</option>
+                                                    <option value="Medico">Medico</option>
+                                                    <option value="Paciente">Paciente</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="paciente2.rol=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                               
@@ -1772,6 +1772,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1790,6 +1793,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1810,6 +1816,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1828,6 +1837,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1848,6 +1860,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1866,6 +1881,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1886,6 +1904,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1904,6 +1925,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1924,6 +1948,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1942,6 +1969,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1962,6 +1992,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1980,6 +2013,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2000,6 +2036,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2018,6 +2057,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2038,6 +2080,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2056,6 +2101,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2076,6 +2124,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2094,6 +2145,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2114,6 +2168,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2133,6 +2190,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div> 
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2719,11 +2779,21 @@ import 'datatables.net';
 import 'datatables.net-dt/css/jquery.dataTables.css';
 import Swal from 'sweetalert2'
 import axios from 'axios'
+import jsPDF from 'jspdf'
+import autoTable from 'jspdf-autotable'
 export default {
     name: "administradorDentito",
 
     data:function(){
     return{
+        paciente2:{
+        nombres:'Manuel',
+        apellidos:'Gonzales Lopez',
+        dni:'88888888',
+        sexo:'Masculino',
+        edad:22,
+        rol:'Paciente',  
+        },
         mostrarlista:true,
         nombres:null,
         apellidos:null,
@@ -2750,6 +2820,12 @@ export default {
         medico: '',
         fecha: null,
         observaciones2: '',
+        paciente: {
+           nombre: 'Jesus',
+           apellido: 'Marallano Barbaran',
+           edad: '36',
+           sexo: 'Masculino',
+       },
         sedes: [
             { value: 'Sede A', text: 'Sede A' },
             { value: 'Sede B', text: 'Sede B' },
@@ -2787,6 +2863,34 @@ export default {
         abrirModal2() {
       this.mostrarModal2 = true;
         },
+        exportPDF() {
+            const doc = new jsPDF()
+            doc.text(this.paciente.nombre, 10, 10);
+            doc.text(this.paciente.apellido, 40, 10);
+            doc.text(this.paciente.edad, 100, 10);
+            doc.text(this.paciente.sexo, 170, 10);
+
+            // It can parse html:
+            // <table id="my-table"><!-- ... --></table>
+            autoTable(doc, { html: '#example7' })
+
+            // Or use javascript directly:
+
+        
+        /*     autoTable(doc, {
+            head: [['Name', 'Email', 'Country']],
+            body: [
+                ['David', 'david@example.com', 'Sweden'],
+                ['Castille', 'castille@example.com', 'Spain'],
+                // ... 
+            ],
+            })  */
+
+            //
+
+            //doc.save('table.pdf')
+        doc.output('dataurlnewwindow'); 
+            },
         validarDNI() {
         if (this.dni2.length === 8) {
             // Simulación de carga de datos del historial de atenciones

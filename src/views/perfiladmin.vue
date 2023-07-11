@@ -204,57 +204,57 @@
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="nombres">
-                                                <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="admin.nombres">
+                                                <p v-if="admin.nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                               
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
-                                                <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="admin.apellidos">
+                                                <p v-if="admin.apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="DNI" v-model="admin.dni">
+                                                <p v-if="admin.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Genero</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <select class="form-control" name="select" v-model="admin.sexo">
                                                     <option value=null selected>Seleccione una opcion</option >
-                                                    <option value="value2" >Masculino</option>
-                                                    <option value="value3">Femenino</option>
+                                                    <option value="Masculino" >Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="admin.sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                             
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Edad" v-model="edad">
-                                                <p v-if="edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="admin.edad">
+                                                <p v-if="admin.edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="rol">
+                                                    <select class="form-control" name="select" v-model="admin.rol">
                                                     <option value=null selected>Seleccione una opcion</option >
-                                                    <option value="value2" >Administrador</option>
-                                                    <option value="value3">Medico</option>
-                                                    <option value="value3">Paciente</option>
+                                                    <option value="Administrador" >Administrador</option>
+                                                    <option value="Medico">Medico</option>
+                                                    <option value="Paciente">Paciente</option>
                                                     </select>    
-                                                    <p v-if="rol=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="admin.rol=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                                             <!-- <div class="form-group row">
@@ -1063,8 +1063,8 @@
                                            <div class="col-sm-10">
                                                <select class="form-control" name="select" v-model="sexo">
                                                <option value=null selected>Seleccione una opcion</option >
-                                               <option value="value2" >Masculino</option>
-                                               <option value="value3">Femenino</option>
+                                               <option value="Masculino" >Masculino</option>
+                                               <option value="Femenino">Femenino</option>
                                                </select>    
                                                <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                        
@@ -1185,7 +1185,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button id="botonestado" style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="margin-top: 5px;" class="dropdown">
@@ -1195,9 +1195,9 @@
                                                                 <div style="left: 53px;top: 37.9px;" id="menuCitas" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                                     <a class="dropdown-item" href="#">Detalles</a>
                                                                     <a class="dropdown-item" href="#">Editar</a>
-                                                                    <a @click="activar()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
-                                                                    <a @click="activar()" class="dropdown-item" href="#">Activar</a>
-                                                                    <a @click="eliminar()" class="dropdown-item" href="#">Cancelar</a>
+                                                                    <a @click="atendidocita()"  v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'" class="dropdown-item" href="#">Atendido</a>
+                                                                    <a @click="activarcita()" class="dropdown-item" href="#">Activar</a>
+                                                                    <a @click="cancelarcita2()" class="dropdown-item" href="#">Cancelar</a>
                                                                 </div>
                                                                 </div>
                                                             
@@ -1226,7 +1226,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="margin-top: 5px;" class="dropdown">
@@ -1253,7 +1253,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="margin-top: 5px;" class="dropdown">
@@ -1279,7 +1279,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="margin-top: 5px;" class="dropdown">
@@ -1305,7 +1305,7 @@
                                                             <td>Av Lima</td>
                                                             <td>lucho@hotmail.com</td>
                                                             <td>
-                                                                <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
+                                                                <button style="pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
                                                             <td>
                                                                 <div style="margin-top: 5px;" class="dropdown">
@@ -1783,6 +1783,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                         <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1801,6 +1804,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1821,6 +1827,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1839,6 +1848,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1859,6 +1871,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1877,6 +1892,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1897,6 +1915,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1915,6 +1936,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1935,6 +1959,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1953,6 +1980,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -1973,6 +2003,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -1991,6 +2024,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2011,6 +2047,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2029,6 +2068,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2049,6 +2091,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2067,6 +2112,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2087,6 +2135,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2105,6 +2156,9 @@
                                                                         <button style="width: 100%;" type="button"  class="btn btn-primary btn-sm">Detalles</button> 
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
+                                                                        </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
                                                                         </div>
                                                                 </div> 
                                                                 </div>  
@@ -2125,6 +2179,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div>
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2144,6 +2201,9 @@
                                                                         <div style="margin-top: 5px;" v-if="user=='juan@hotmail.com' || user=='jhon@hotmail.com'">
                                                                             <button style="width: 100%;" type="button"  class="btn btn-success btn-sm" data-toggle="modal" data-target="#modalContactForm">Registrar Atencion</button> 
                                                                         </div> 
+                                                                        <div style="margin-top: 5px;" >
+                                                                            <button style="width: 100%;" type="button" @click="exportPDF"  class="btn btn-danger btn-sm" >PDF</button> 
+                                                                        </div>
                                                                 </div> 
                                                                 </div>  
                                                             </td>
@@ -2609,48 +2669,69 @@
                             <form>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nombres</label>
-                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Nombres">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Nombres" v-model="atencion.nombres">
+                                <p v-if="atencion.nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Apellidos</label>
-                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Apellidos">
+                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Apellidos" v-model="atencion.apellidos">
+                                <p v-if="atencion.apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">DNI</label>
-                                <input type="number" class="form-control"  aria-describedby="emailHelp" placeholder="DNI">
+                                <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="DNI" v-model="atencion.dni">
+                                <p v-if="atencion.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Sexo</label>
-                                <select class="form-control" name="select" v-model="sexo">
+                                <select class="form-control" name="select" v-model="atencion.sexo">
                                 <option value=null selected>Seleccione una opcion</option >
                                 <option value="value2" >Masculino</option>
                                 <option value="value3">Femenino</option>
                                 </select> 
+                                <p v-if="atencion.sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Direccion</label>
-                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Direccion">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Direccion" v-model="atencion.direccion">
+                                <p v-if="atencion.direccion==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Email">
+                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email" v-model="atencion.email">
+                                <p v-if="atencion.email==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Telefono</label>
-                                <input type="number" class="form-control"  aria-describedby="emailHelp" placeholder="Telefono">
+                                <input type="number" class="form-control"  aria-describedby="emailHelp" placeholder="Telefono" v-model="atencion.telefono">
+                                <p v-if="atencion.telefono==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Fecha de Nacimiento</label>
-                                <input type="date" class="form-control"  placeholder="Fecha de Nacimiento">
+                                <input type="date" class="form-control"  placeholder="Fecha de Nacimiento" v-model="atencion.fechanac">
+                                <p v-if="atencion.fechanac==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Fecha y Hora de Atencion</label>
-                                <input type="datetime-local" class="form-control"  placeholder="Fecha y Hora de Atencion">
+                                <input type="datetime-local" class="form-control"  placeholder="Fecha y Hora de Atencion" v-model="atencion.fechaatenc">
+                                <p v-if="atencion.fechaatenc==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Atencion Realizada</label>
                            
-                                <textarea rows="10" type="text" class="form-control"  placeholder="Atencion Realizada"></textarea>
+                                <textarea rows="10" v-model="atencion.atencionre" type="text" class="form-control"  placeholder="Atencion Realizada"></textarea >
+                                <p v-if="atencion.atencionre==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+
                             </div>
                                              
                             </form>
@@ -2658,8 +2739,8 @@
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
                       
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary">Registrar</button>
+                                <button type="button" id="cancelarmodal"  class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="button" @click="registraraten()" class="btn btn-primary">Registrar</button>
                     
                         </div>
                         </div>
@@ -2730,11 +2811,33 @@ import 'datatables.net';
 import 'datatables.net-dt/css/jquery.dataTables.css';
 import Swal from 'sweetalert2'
 import axios from 'axios'
+import jsPDF from 'jspdf'
+import autoTable from 'jspdf-autotable'
 export default {
     name: "administradorDentito",
 
     data:function(){
     return{
+        atencion:{
+            nombres:null,
+            apellidos:null,
+            dni:null,
+            sexo:null,
+            direccion:null,
+            email:null,
+            telefono:null,
+            fechanac:null,
+            fechaatenc:null,
+            atencionre:null,
+        }, 
+        admin:{
+        nombres:'Juan',
+        apellidos:'Mamani Quispe',
+        dni:'44444444',
+        sexo:'Masculino',
+        edad:25,
+        rol:'Administrador',  
+        },
         mostrarlista:true,
         nombres:null,
         apellidos:null,
@@ -2762,6 +2865,12 @@ export default {
         medico: '',
         fecha: null,
         observaciones2: '',
+        paciente: {
+           nombre: 'Jesus',
+           apellido: 'Marallano Barbaran',
+           edad: '36',
+           sexo: 'Masculino',
+       },
         sedes: [
             { value: 'Sede A', text: 'Sede A' },
             { value: 'Sede B', text: 'Sede B' },
@@ -2806,6 +2915,132 @@ export default {
     },
     
     methods:{
+        registraraten(){
+
+if( this.atencion.nombres==null || this.atencion.nombres=='' || this.atencion.apellidos==null || this.atencion.apellidos=='' || this.atencion.dni==null || this.atencion.dni=='' || this.atencion.sexo==null || this.atencion.sexo=='' || this.atencion.direccion==null || this.atencion.direccion==''
+|| this.atencion.email==null || this.atencion.email=='' || this.atencion.telefono==null || this.atencion.telefono=='' || this.atencion.fechanac==null || this.atencion.fechanac=='' || this.atencion.fechaatenc==null || this.atencion.fechaatenc=='' || this.atencion.atencionre==null || this.atencion.atencionre==''
+){
+  
+    if(this.atencion.nombres==null){
+        this.atencion.nombres=''
+    }
+    if(this.atencion.apellidos==null){
+        this.atencion.apellidos=''
+    }
+    if(this.atencion.dni==null){
+        this.atencion.dni=''
+    }
+    if(this.atencion.sexo==null){
+        this.atencion.sexo='null'
+    }
+    if(this.atencion.direccion==null){
+        this.atencion.direccion=''
+    }
+    if(this.atencion.email==null){
+        this.atencion.email=''
+    }
+    if(this.atencion.telefono==null){
+        this.atencion.telefono=''
+    }
+    if(this.atencion.fechanac==null){
+        this.atencion.fechanac=''
+    }
+    if(this.atencion.fechaatenc==null){
+        this.atencion.fechaatenc=''
+    }
+    if(this.atencion.atencionre==null){
+        this.atencion.atencionre=''
+    }
+ 
+    
+
+}else{
+   
+         $('#cancelarmodal').trigger('click');
+       let formData = new FormData();
+        formData.append( 'nombres',this.nombres);
+        formData.append( 'apellidos',this.apellidos);
+        formData.append('dni', this.dni);
+        formData.append( 'sexo',this.sexo);
+        formData.append( 'direccion',this.direccion);
+        formData.append('email',this.email);
+        formData.append('telefono', this.telefono);
+        formData.append( 'telefonoemer',this.telefonoemer);
+        formData.append('fechanac',this.fechanac);
+        formData.append('observaciones',this.observaciones);
+        const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+        title: 'Estas seguro de registrar esto?',
+        text: "Recuerda revisar los datos por ultima vez!",
+        icon: 'warning',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Aceptar',
+        reverseButtons: true
+        }).then((result) => {
+        if (result.isConfirmed) {
+            // axios.post(this.url+"registrar_paciente",formData)
+            // .then(() => {
+            //     $("#botonagregar2").trigger("click")
+               
+            // })
+            // this.listaPacientes()
+       
+            swalWithBootstrapButtons.fire(
+            'Aceptado!',
+            'Paciente registrado Correctamente!',
+            'success',
+            )
+          
+          
+        } else if (
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+            'Cancelado',
+            'Tu registro ha sido cancelado!',
+            'error'
+            )
+        }
+        })   
+}   
+
+},
+        exportPDF() {
+            const doc = new jsPDF()
+            doc.text(this.paciente.nombre, 10, 10);
+            doc.text(this.paciente.apellido, 40, 10);
+            doc.text(this.paciente.edad, 100, 10);
+            doc.text(this.paciente.sexo, 170, 10);
+
+            // It can parse html:
+            // <table id="my-table"><!-- ... --></table>
+            autoTable(doc, { html: '#example7' })
+
+            // Or use javascript directly:
+
+        
+        /*     autoTable(doc, {
+            head: [['Name', 'Email', 'Country']],
+            body: [
+                ['David', 'david@example.com', 'Sweden'],
+                ['Castille', 'castille@example.com', 'Spain'],
+                // ... 
+            ],
+            })  */
+
+            //
+
+            //doc.save('table.pdf')
+        doc.output('dataurlnewwindow'); 
+            },
         abrirModal2() {
         this.mostrarModal2 = true;
         },
@@ -3094,7 +3329,7 @@ export default {
                 })
 
                 swalWithBootstrapButtons.fire({
-                title: 'Estas seguro de activar a este usuario?',
+                title: 'Estas seguro de modificar esta cita?',
                 text: "Recuerda revisar los datos por ultima vez!",
                 icon: 'warning',
                 showCancelButton: true,
@@ -3109,6 +3344,140 @@ export default {
                        
                     // })
                     // this.listaPacientes()
+                    // console.log($("#botonestado").text("Atendido"))
+                    
+                    swalWithBootstrapButtons.fire(
+                    'Aceptado!',
+                    'Paciente activado Correctamente!',
+                    'success',
+                    )
+                  
+                  
+                } else if (
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire(
+                    'Cancelado',
+                    'Se ha cancelado la modificacion!',
+                    'error'
+                    )
+                }
+                })  
+        },
+        atendidocita(){
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+                })
+
+                swalWithBootstrapButtons.fire({
+                title: 'Estas seguro de modificar esta cita?',
+                text: "Recuerda revisar los datos por ultima vez!",
+                icon: 'warning',
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Aceptar',
+                reverseButtons: true
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    // axios.post(this.url+"registrar_paciente",formData)
+                    // .then(() => {
+                    //     $("#botonagregar2").trigger("click")
+                       
+                    // })
+                    // this.listaPacientes()
+                    $("#botonestado").text("Atendido")
+                    swalWithBootstrapButtons.fire(
+                    'Aceptado!',
+                    'Paciente activado Correctamente!',
+                    'success',
+                    )
+                  
+                  
+                } else if (
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire(
+                    'Cancelado',
+                    'Se ha cancelado la modificacion!',
+                    'error'
+                    )
+                }
+                })  
+        },
+        activarcita(){
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+                })
+
+                swalWithBootstrapButtons.fire({
+                title: 'Estas seguro de modificar esta cita?',
+                text: "Recuerda revisar los datos por ultima vez!",
+                icon: 'warning',
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Aceptar',
+                reverseButtons: true
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    // axios.post(this.url+"registrar_paciente",formData)
+                    // .then(() => {
+                    //     $("#botonagregar2").trigger("click")
+                       
+                    // })
+                    // this.listaPacientes()
+                   $("#botonestado").text("Activado")
+                    swalWithBootstrapButtons.fire(
+                    'Aceptado!',
+                    'Paciente activado Correctamente!',
+                    'success',
+                    )
+                  
+                  
+                } else if (
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire(
+                    'Cancelado',
+                    'Se ha cancelado la modificacion!',
+                    'error'
+                    )
+                }
+                })  
+        },
+        cancelarcita2(){
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                buttonsStyling: false
+                })
+
+                swalWithBootstrapButtons.fire({
+                title: 'Estas seguro de modificar esta cita?',
+                text: "Recuerda revisar los datos por ultima vez!",
+                icon: 'warning',
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                confirmButtonText: 'Aceptar',
+                reverseButtons: true
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    // axios.post(this.url+"registrar_paciente",formData)
+                    // .then(() => {
+                    //     $("#botonagregar2").trigger("click")
+                       
+                    // })
+                    // this.listaPacientes()
+                    $("#botonestado").text("Cancelado")
                     swalWithBootstrapButtons.fire(
                     'Aceptado!',
                     'Paciente activado Correctamente!',
@@ -3424,13 +3793,13 @@ table.dataTable tbody td {
     left: -143px;
 }
 /* .dropdown .dropdown-menu {
-    top:30px;
-    margin-top: -1px !important;
- 
-}
-.dropdown-menu {
+     top:30px;
+    margin-top: -1px !important; 
+     transform: scale(1, 0) !important; 
+}  */
+/* .dropdown-menu {
     display: none !important;
-} */
+}  */
 .dropdown-menu.show {
     display: block !important;
    

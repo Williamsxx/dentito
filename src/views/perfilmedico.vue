@@ -204,8 +204,8 @@
                                             <div class="form-group row">
                                                 <label for="inputName" class="col-sm-2 col-form-label">Nombres</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="nombres">
-                                                <p v-if="nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Nombres" v-model="medico2.nombres">
+                                                <p v-if="medico2.nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                               
                                             </div>
@@ -213,49 +213,49 @@
                                             <div class="form-group row">
                                                 <label for="inputEmail" class="col-sm-2 col-form-label">Apellidos</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="apellidos">
-                                                <p v-if="apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Apellidos" v-model="medico2.apellidos">
+                                                <p v-if="medico2.apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">DNI</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="DNI" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="DNI" v-model="medico2.dni">
+                                                <p v-if="medico2.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Genero</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <select class="form-control" name="select" v-model="medico2.sexo">
                                                     <option value=null selected>Seleccione una opcion</option >
-                                                    <option value="value2" >Masculino</option>
-                                                    <option value="value3">Femenino</option>
+                                                    <option value="Masculino" >Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="medico2.sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                             
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Edad" v-model="dni">
-                                                <p v-if="dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="medico2.dni">
+                                                <p v-if="medico2.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Rol</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-control" name="select" v-model="sexo">
+                                                    <select class="form-control" name="select" v-model="medico2.rol">
                                                     <option value=null selected>Seleccione una opcion</option >
-                                                    <option value="value2" >Administrador</option>
-                                                    <option value="value3">Medico</option>
-                                                    <option value="value3">Paciente</option>
+                                                    <option value="Administrador" >Administrador</option>
+                                                    <option value="Medico">Medico</option>
+                                                    <option value="Paciente">Paciente</option>
                                                     </select>    
-                                                    <p v-if="sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                    <p v-if="medico2.rol=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
                                                 </div>
                                             </div>
                                             <!-- <div class="form-group row">
@@ -2657,48 +2657,69 @@
                             <form>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Nombres</label>
-                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Nombres">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Nombres" v-model="atencion.nombres">
+                                <p v-if="atencion.nombres==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Apellidos</label>
-                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Apellidos">
+                                <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Apellidos" v-model="atencion.apellidos">
+                                <p v-if="atencion.apellidos==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">DNI</label>
-                                <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="DNI">
+                                <input type="number" class="form-control" aria-describedby="emailHelp" placeholder="DNI" v-model="atencion.dni">
+                                <p v-if="atencion.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Sexo</label>
-                                <select class="form-control" name="select" v-model="sexo">
+                                <select class="form-control" name="select" v-model="atencion.sexo">
                                 <option value=null selected>Seleccione una opcion</option >
                                 <option value="value2" >Masculino</option>
                                 <option value="value3">Femenino</option>
                                 </select> 
+                                <p v-if="atencion.sexo=='null'" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Direccion</label>
-                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Direccion">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Direccion" v-model="atencion.direccion">
+                                <p v-if="atencion.direccion==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
-                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
+                                <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email" v-model="atencion.email">
+                                <p v-if="atencion.email==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Telefono</label>
-                                <input type="number" class="form-control"  aria-describedby="emailHelp" placeholder="Telefono">
+                                <input type="number" class="form-control"  aria-describedby="emailHelp" placeholder="Telefono" v-model="atencion.telefono">
+                                <p v-if="atencion.telefono==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Fecha de Nacimiento</label>
-                                <input type="date" class="form-control"  placeholder="Fecha de Nacimiento">
+                                <input type="date" class="form-control"  placeholder="Fecha de Nacimiento" v-model="atencion.fechanac">
+                                <p v-if="atencion.fechanac==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Fecha y Hora de Atencion</label>
-                                <input type="datetime-local" class="form-control"  placeholder="Fecha y Hora de Atencion">
+                                <input type="datetime-local" class="form-control"  placeholder="Fecha y Hora de Atencion" v-model="atencion.fechaatenc">
+                                <p v-if="atencion.fechaatenc==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Atencion Realizada</label>
                            
-                                <textarea rows="10" type="text" class="form-control"  placeholder="Atencion Realizada"></textarea>
+                                <textarea rows="10" v-model="atencion.atencionre" type="text" class="form-control"  placeholder="Atencion Realizada"></textarea >
+                                <p v-if="atencion.atencionre==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+
+
                             </div>
                                              
                             </form>
@@ -2706,8 +2727,8 @@
                         </div>
                         <div class="modal-footer d-flex justify-content-center">
                       
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary">Registrar</button>
+                                <button type="button" id="cancelarmodal"  class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="button" @click="registraraten()" class="btn btn-primary">Registrar</button>
                     
                         </div>
                         </div>
@@ -2785,6 +2806,26 @@ export default {
 
     data:function(){
     return{
+        atencion:{
+            nombres:null,
+            apellidos:null,
+            dni:null,
+            sexo:null,
+            direccion:null,
+            email:null,
+            telefono:null,
+            fechanac:null,
+            fechaatenc:null,
+            atencionre:null,
+        },    
+        medico2:{
+        nombres:'Jhon',
+        apellidos:'Quispe Diaz',
+        dni:'55555555',
+        sexo:'Masculino',
+        edad:50,
+        rol:'Medico',  
+        },
         mostrarlista:true,
         nombres:null,
         apellidos:null,
@@ -3202,6 +3243,104 @@ export default {
                 }
                 })  
         },
+        registraraten(){
+
+if( this.atencion.nombres==null || this.atencion.nombres=='' || this.atencion.apellidos==null || this.atencion.apellidos=='' || this.atencion.dni==null || this.atencion.dni=='' || this.atencion.sexo==null || this.atencion.sexo=='' || this.atencion.direccion==null || this.atencion.direccion==''
+|| this.atencion.email==null || this.atencion.email=='' || this.atencion.telefono==null || this.atencion.telefono=='' || this.atencion.fechanac==null || this.atencion.fechanac=='' || this.atencion.fechaatenc==null || this.atencion.fechaatenc=='' || this.atencion.atencionre==null || this.atencion.atencionre==''
+){
+  
+    if(this.atencion.nombres==null){
+        this.atencion.nombres=''
+    }
+    if(this.atencion.apellidos==null){
+        this.atencion.apellidos=''
+    }
+    if(this.atencion.dni==null){
+        this.atencion.dni=''
+    }
+    if(this.atencion.sexo==null){
+        this.atencion.sexo='null'
+    }
+    if(this.atencion.direccion==null){
+        this.atencion.direccion=''
+    }
+    if(this.atencion.email==null){
+        this.atencion.email=''
+    }
+    if(this.atencion.telefono==null){
+        this.atencion.telefono=''
+    }
+    if(this.atencion.fechanac==null){
+        this.atencion.fechanac=''
+    }
+    if(this.atencion.fechaatenc==null){
+        this.atencion.fechaatenc=''
+    }
+    if(this.atencion.atencionre==null){
+        this.atencion.atencionre=''
+    }
+ 
+    
+
+}else{
+   
+         $('#cancelarmodal').trigger('click');
+       let formData = new FormData();
+        formData.append( 'nombres',this.nombres);
+        formData.append( 'apellidos',this.apellidos);
+        formData.append('dni', this.dni);
+        formData.append( 'sexo',this.sexo);
+        formData.append( 'direccion',this.direccion);
+        formData.append('email',this.email);
+        formData.append('telefono', this.telefono);
+        formData.append( 'telefonoemer',this.telefonoemer);
+        formData.append('fechanac',this.fechanac);
+        formData.append('observaciones',this.observaciones);
+        const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+        })
+
+        swalWithBootstrapButtons.fire({
+        title: 'Estas seguro de registrar esto?',
+        text: "Recuerda revisar los datos por ultima vez!",
+        icon: 'warning',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Aceptar',
+        reverseButtons: true
+        }).then((result) => {
+        if (result.isConfirmed) {
+            // axios.post(this.url+"registrar_paciente",formData)
+            // .then(() => {
+            //     $("#botonagregar2").trigger("click")
+               
+            // })
+            // this.listaPacientes()
+       
+            swalWithBootstrapButtons.fire(
+            'Aceptado!',
+            'Paciente registrado Correctamente!',
+            'success',
+            )
+          
+          
+        } else if (
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+            'Cancelado',
+            'Tu registro ha sido cancelado!',
+            'error'
+            )
+        }
+        })   
+}   
+
+},
         registrar(){
 
         if( this.nombres==null || this.nombres=='' || this.apellidos==null || this.apellidos=='' || this.dni==null || this.dni=='' || this.sexo==null || this.sexo=='' || this.direccion==null || this.direccion==''
