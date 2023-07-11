@@ -914,9 +914,9 @@
                                         <div class="tab-pane" id="usuario" v-on:submit.prevent="registrar">
                                             <form class="form-horizontal">
                                                 <div class="form-group row">
-                                                <label  class="col-sm-2 col-form-label">DNI</label>
+                                                <label  class="col-sm-2 col-form-label">Email</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="DNI" v-model="usuario.dni">
+                                                <input type="text" class="form-control"  placeholder="Email" v-model="usuario.dni">
                                                 <p v-if="usuario.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>

@@ -241,8 +241,8 @@
                                             <div class="form-group row">
                                                 <label for="inputName2" class="col-sm-2 col-form-label">Edad</label>
                                                 <div class="col-sm-10">
-                                                <input type="text" class="form-control"  placeholder="Edad" v-model="medico2.dni">
-                                                <p v-if="medico2.dni==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
+                                                <input type="text" class="form-control"  placeholder="Edad" v-model="medico2.edad">
+                                                <p v-if="medico2.edad==''" style="text-align: left;margin: 0;color: red;" class="text-danger">Complete este campo</p>
 
                                                 </div>
                                             </div>
@@ -1159,7 +1159,7 @@
                                                             <th>Apellidos</th>
                                                             <th>Documento</th>
                                                             <th>Direccion</th>
-                                                            <th>Email</th>
+                                                            <th>Fecha y hora</th>
                                                             <th>Estado</th>
                                                             <th>Acciones</th>
                                                         </tr>
@@ -1171,7 +1171,7 @@
                                                             <td>Quispe Fernandez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-12-11 08:00</td>
                                                             <td>
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
@@ -1212,7 +1212,7 @@
                                                             <td>Quispe Fernandez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-12-11 08:00</td>
                                                             <td>
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
@@ -1239,7 +1239,7 @@
                                                             <td>Quispe Fernandez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-12-11 08:00</td>
                                                             <td>
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
@@ -1265,7 +1265,7 @@
                                                             <td>Quispe Fernandez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-12-11 08:00</td>
                                                             <td>
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
@@ -1291,7 +1291,7 @@
                                                             <td>Quispe Fernandez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-12-11 08:00</td>
                                                             <td>
                                                                 <button style="width: 50%;pointer-events: none;" type="button" class="btn btn-success btn-sm">Activado</button> 
                                                             </td>
@@ -1318,7 +1318,7 @@
                                                             <td>Mamani Ramirez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-12-11 08:00</td>
                                                             <td>
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
@@ -1346,7 +1346,7 @@
                                                             <td>Mamani Ramirez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-05-11 14:00</td>
                                                             <td>
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
@@ -1372,7 +1372,7 @@
                                                             <td>Mamani Ramirez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-05-11 14:00</td>
                                                             <td>
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
@@ -1398,7 +1398,7 @@
                                                             <td>Mamani Ramirez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-05-11 14:00</td>
                                                             <td>
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>
@@ -1425,7 +1425,7 @@
                                                             <td>Mamani Ramirez</td>
                                                             <td>123456</td>
                                                             <td>Av Lima</td>
-                                                            <td>lucho@hotmail.com</td>
+                                                            <td>2023-05-11 14:00</td>
                                                             <td>
                                                                 <button style="width: 55%;pointer-events: none;" type="button" class="btn btn-danger btn-sm">Cancelado</button> 
                                                             </td>

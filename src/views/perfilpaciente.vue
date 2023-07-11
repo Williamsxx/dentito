@@ -2906,13 +2906,19 @@ export default {
         this.historial = '';
         },
         descargarPDF() {
-        const link = document.createElement('a');
-        link.href = '/historial.pdf'; // Ruta del archivo PDF
-        link.download = 'historial.pdf'; // Nombre de archivo de descarga
-        link.target = '_blank';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+          
+            const doc = new jsPDF();
+
+            autoTable(doc, { html: '#example3' })
+
+            doc.save("historial.pdf");
+        // const link = document.createElement('a');
+        // link.href = '/historial.pdf'; // Ruta del archivo PDF
+        // link.download = 'historial.pdf'; // Nombre de archivo de descarga
+        // link.target = '_blank';
+        // document.body.appendChild(link);
+        // link.click();
+        // document.body.removeChild(link);
         },
         abrirModal(){
             this.mostrarModal = true;
