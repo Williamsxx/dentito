@@ -131,6 +131,7 @@ export default{
 
 computed: {
     filteredData() {
+      console.log("Filtro");
       return this.atenciones
         .filter(
           (entry) => this.atenciones.length
@@ -144,26 +145,40 @@ computed: {
    methods: {
     exportPDF() {
      const doc = new jsPDF()
-     doc.text(this.paciente.nombre, 10, 10);
-     doc.text(this.paciente.apellido, 40, 10);
-     doc.text(this.paciente.edad, 100, 10);
-     doc.text(this.paciente.sexo, 170, 10);
+     doc.text("Nombre:", 10, 10);
+     doc.text(this.paciente.nombre, 10, 20);
+     
+     doc.text("Apellidos:", 40, 10);
+     doc.text(this.paciente.apellido, 40, 20);
+
+     doc.text("Edad:", 100, 10);
+     doc.text(this.paciente.edad, 100, 20);
+
+
+     doc.text("Sexo:", 170, 10);
+     doc.text(this.paciente.sexo, 170, 20);
 
     // It can parse html:
     // <table id="my-table"><!-- ... --></table>
-    autoTable(doc, { html: '#my-reptable' })
+    
+    //autoTable(doc, { html: '#my-reptable' })
 
     // Or use javascript directly:
 
  
-/*     autoTable(doc, {
-    head: [['Name', 'Email', 'Country']],
+  autoTable(doc, {
+    startY: 40,
+    head: [['Tipo Atencion', 'Diente', 'Diagnostico']],
     body: [
-        ['David', 'david@example.com', 'Sweden'],
-        ['Castille', 'castille@example.com', 'Spain'],
+        ['Curación', 'D1', 'Picado'],
+        ['Curación', 'D28', 'Picado'],
+        ['Curación', 'D16', 'Picado'],
+        ['Curación', 'D9', 'Picado'],
+        ['Curación', 'D25', 'Picado'],
+        ['Curación', 'D14', 'Roto'],
         // ... 
     ],
-    })  */
+    })  
 
     //
 
